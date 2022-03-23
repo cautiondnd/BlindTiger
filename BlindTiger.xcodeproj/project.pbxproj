@@ -1,0 +1,959 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 52;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		27EDA5F21EF3891D51F312A2 /* Pods_BlindTiger_BlindTigerUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 203EFEC5C9076CFCE78E3097 /* Pods_BlindTiger_BlindTigerUITests.framework */; };
+		504A46949DA7A52EE4ECF2D6 /* Pods_BlindTigerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B8A79E2AC92DE37ED8C880F /* Pods_BlindTigerTests.framework */; };
+		905B721CCC0034727C654BC6 /* Pods_BlindTiger.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 45571985574E6E6E3FE153ED /* Pods_BlindTiger.framework */; };
+		AC1C06DE256D90A2009A4694 /* DateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC1C06DD256D90A2009A4694 /* DateExtension.swift */; };
+		AC1C06E3256D90B3009A4694 /* navbarColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC1C06E2256D90B3009A4694 /* navbarColorExtension.swift */; };
+		AC1C06E8256FF33E009A4694 /* KeyboardExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC1C06E7256FF33E009A4694 /* KeyboardExtensions.swift */; };
+		AC1C06F52572C45A009A4694 /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC1C06F42572C45A009A4694 /* SearchViewModel.swift */; };
+		AC1C06FA2572EB60009A4694 /* PeekView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC1C06F92572EB60009A4694 /* PeekView.swift */; };
+		AC1C06FF2572EB7C009A4694 /* PeakViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC1C06FE2572EB7C009A4694 /* PeakViewModel.swift */; };
+		AC1C070425747F92009A4694 /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC1C070325747F92009A4694 /* ProfileViewModel.swift */; };
+		AC1C0709257562D4009A4694 /* NotSelfProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC1C0708257562D4009A4694 /* NotSelfProfileView.swift */; };
+		AC2C1C3525651C1700C30014 /* NewPost.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2C1C3425651C1700C30014 /* NewPost.swift */; };
+		AC2C1C3A25651C2900C30014 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2C1C3925651C2900C30014 /* Colors.swift */; };
+		AC2C1C3F25651DD600C30014 /* NewPostViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2C1C3E25651DD600C30014 /* NewPostViewModel.swift */; };
+		AC2C1C44256581F600C30014 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2C1C43256581F600C30014 /* HomeViewModel.swift */; };
+		AC36B4462592CAE800A1A038 /* TabViewWorkaround.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC36B4452592CAE800A1A038 /* TabViewWorkaround.swift */; };
+		AC4F4E1325A295A5004FE9D0 /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = AC4F4E1225A295A5004FE9D0 /* SDWebImageSwiftUI */; };
+		AC55BDF52559AAB100FDAC18 /* Welcome.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC55BDF42559AAB100FDAC18 /* Welcome.swift */; };
+		AC5C542F255052E5008D66B0 /* BlindTigerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC5C542E255052E5008D66B0 /* BlindTigerApp.swift */; };
+		AC5C5431255052E5008D66B0 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC5C5430255052E5008D66B0 /* ContentView.swift */; };
+		AC5C5433255052E7008D66B0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC5C5432255052E7008D66B0 /* Assets.xcassets */; };
+		AC5C5436255052E7008D66B0 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC5C5435255052E7008D66B0 /* Preview Assets.xcassets */; };
+		AC5C5441255052E8008D66B0 /* BlindTigerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC5C5440255052E8008D66B0 /* BlindTigerTests.swift */; };
+		AC5C544C255052E8008D66B0 /* BlindTigerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC5C544B255052E8008D66B0 /* BlindTigerUITests.swift */; };
+		AC5C54A825506C44008D66B0 /* PreLoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC5C54A725506C44008D66B0 /* PreLoginView.swift */; };
+		AC5C54DF255198B2008D66B0 /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC5C54DE255198B2008D66B0 /* Home.swift */; };
+		AC7D3539259413B2009C5573 /* TextFieldExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC7D3538259413B2009C5573 /* TextFieldExtension.swift */; };
+		AC90AEDE258D76EF00D3FE6E /* PeekCommentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC90AEDD258D76EF00D3FE6E /* PeekCommentView.swift */; };
+		AC928CFD257E87E4008B4871 /* NotificationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC928CFC257E87E4008B4871 /* NotificationViewModel.swift */; };
+		AC928D162582FC83008B4871 /* PullToRefresh.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC928D152582FC83008B4871 /* PullToRefresh.swift */; };
+		ACB7C35125A0E58000CB6320 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = ACB7C35025A0E58000CB6320 /* GoogleService-Info.plist */; };
+		ACB7C35F25A2177600CB6320 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB7C35E25A2177600CB6320 /* ImagePicker.swift */; };
+		ACB7C36425A2235200CB6320 /* UploadImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB7C36325A2235200CB6320 /* UploadImage.swift */; };
+		ACE0C3492561A4CF0051C61D /* TabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACE0C3482561A4CF0051C61D /* TabBar.swift */; };
+		ACE0C3562561AEEE0051C61D /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACE0C3552561AEEE0051C61D /* SearchView.swift */; };
+		ACE0C35B2561AEFD0051C61D /* NotificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACE0C35A2561AEFD0051C61D /* NotificationView.swift */; };
+		ACE0C3602561AF230051C61D /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACE0C35F2561AF230051C61D /* ProfileView.swift */; };
+		ACEE2CE3255D539B00C6CE6C /* WelcomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACEE2CE2255D539B00C6CE6C /* WelcomeViewModel.swift */; };
+		ACF3C891256ACAB90045AB20 /* CommentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACF3C890256ACAB90045AB20 /* CommentView.swift */; };
+		ACF3C896256ACB310045AB20 /* CommentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACF3C895256ACB310045AB20 /* CommentViewModel.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		AC5C543D255052E8008D66B0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AC5C5423255052E5008D66B0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AC5C542A255052E5008D66B0;
+			remoteInfo = BlindTiger;
+		};
+		AC5C5448255052E8008D66B0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AC5C5423255052E5008D66B0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AC5C542A255052E5008D66B0;
+			remoteInfo = BlindTiger;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		07F5EC5C86248DA72A441378 /* Pods-BlindTiger.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BlindTiger.release.xcconfig"; path = "Target Support Files/Pods-BlindTiger/Pods-BlindTiger.release.xcconfig"; sourceTree = "<group>"; };
+		0CF888BA81A0A59BAC789447 /* Pods-BlindTiger.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BlindTiger.debug.xcconfig"; path = "Target Support Files/Pods-BlindTiger/Pods-BlindTiger.debug.xcconfig"; sourceTree = "<group>"; };
+		203EFEC5C9076CFCE78E3097 /* Pods_BlindTiger_BlindTigerUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BlindTiger_BlindTigerUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		27443F9BCDE5CE3CE62A543E /* Pods-BlindTiger-BlindTigerUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BlindTiger-BlindTigerUITests.debug.xcconfig"; path = "Target Support Files/Pods-BlindTiger-BlindTigerUITests/Pods-BlindTiger-BlindTigerUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		45571985574E6E6E3FE153ED /* Pods_BlindTiger.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BlindTiger.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		535B4CCC29B49645A371CA7E /* Pods-BlindTigerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BlindTigerTests.release.xcconfig"; path = "Target Support Files/Pods-BlindTigerTests/Pods-BlindTigerTests.release.xcconfig"; sourceTree = "<group>"; };
+		5B8A79E2AC92DE37ED8C880F /* Pods_BlindTigerTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BlindTigerTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		89CBB4128EB493906098CE1E /* Pods-BlindTiger-BlindTigerUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BlindTiger-BlindTigerUITests.release.xcconfig"; path = "Target Support Files/Pods-BlindTiger-BlindTigerUITests/Pods-BlindTiger-BlindTigerUITests.release.xcconfig"; sourceTree = "<group>"; };
+		AC1C06DD256D90A2009A4694 /* DateExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtension.swift; sourceTree = "<group>"; };
+		AC1C06E2256D90B3009A4694 /* navbarColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = navbarColorExtension.swift; sourceTree = "<group>"; };
+		AC1C06E7256FF33E009A4694 /* KeyboardExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardExtensions.swift; sourceTree = "<group>"; };
+		AC1C06F42572C45A009A4694 /* SearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModel.swift; sourceTree = "<group>"; };
+		AC1C06F92572EB60009A4694 /* PeekView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeekView.swift; sourceTree = "<group>"; };
+		AC1C06FE2572EB7C009A4694 /* PeakViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeakViewModel.swift; sourceTree = "<group>"; };
+		AC1C070325747F92009A4694 /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
+		AC1C0708257562D4009A4694 /* NotSelfProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotSelfProfileView.swift; sourceTree = "<group>"; };
+		AC2C1C3425651C1700C30014 /* NewPost.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewPost.swift; sourceTree = "<group>"; };
+		AC2C1C3925651C2900C30014 /* Colors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		AC2C1C3E25651DD600C30014 /* NewPostViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPostViewModel.swift; sourceTree = "<group>"; };
+		AC2C1C43256581F600C30014 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		AC36B4452592CAE800A1A038 /* TabViewWorkaround.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabViewWorkaround.swift; sourceTree = "<group>"; };
+		AC55BDF42559AAB100FDAC18 /* Welcome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Welcome.swift; sourceTree = "<group>"; };
+		AC5C542B255052E5008D66B0 /* BlindTiger.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BlindTiger.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		AC5C542E255052E5008D66B0 /* BlindTigerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlindTigerApp.swift; sourceTree = "<group>"; };
+		AC5C5430255052E5008D66B0 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		AC5C5432255052E7008D66B0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		AC5C5435255052E7008D66B0 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		AC5C5437255052E7008D66B0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AC5C543C255052E8008D66B0 /* BlindTigerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BlindTigerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		AC5C5440255052E8008D66B0 /* BlindTigerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlindTigerTests.swift; sourceTree = "<group>"; };
+		AC5C5442255052E8008D66B0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AC5C5447255052E8008D66B0 /* BlindTigerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BlindTigerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		AC5C544B255052E8008D66B0 /* BlindTigerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlindTigerUITests.swift; sourceTree = "<group>"; };
+		AC5C544D255052E8008D66B0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AC5C54A725506C44008D66B0 /* PreLoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreLoginView.swift; sourceTree = "<group>"; };
+		AC5C54DE255198B2008D66B0 /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
+		AC7D3538259413B2009C5573 /* TextFieldExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldExtension.swift; sourceTree = "<group>"; };
+		AC90AEDD258D76EF00D3FE6E /* PeekCommentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeekCommentView.swift; sourceTree = "<group>"; };
+		AC928CFC257E87E4008B4871 /* NotificationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationViewModel.swift; sourceTree = "<group>"; };
+		AC928D152582FC83008B4871 /* PullToRefresh.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PullToRefresh.swift; sourceTree = "<group>"; };
+		ACB7C35025A0E58000CB6320 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		ACB7C35E25A2177600CB6320 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
+		ACB7C36325A2235200CB6320 /* UploadImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadImage.swift; sourceTree = "<group>"; };
+		ACE0C3482561A4CF0051C61D /* TabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBar.swift; sourceTree = "<group>"; };
+		ACE0C3552561AEEE0051C61D /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
+		ACE0C35A2561AEFD0051C61D /* NotificationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationView.swift; sourceTree = "<group>"; };
+		ACE0C35F2561AF230051C61D /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		ACEE2CE2255D539B00C6CE6C /* WelcomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewModel.swift; sourceTree = "<group>"; };
+		ACF3C890256ACAB90045AB20 /* CommentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentView.swift; sourceTree = "<group>"; };
+		ACF3C895256ACB310045AB20 /* CommentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentViewModel.swift; sourceTree = "<group>"; };
+		C6D96EC208CDC9C2D687E738 /* Pods-BlindTigerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BlindTigerTests.debug.xcconfig"; path = "Target Support Files/Pods-BlindTigerTests/Pods-BlindTigerTests.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		AC5C5428255052E5008D66B0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AC4F4E1325A295A5004FE9D0 /* SDWebImageSwiftUI in Frameworks */,
+				905B721CCC0034727C654BC6 /* Pods_BlindTiger.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AC5C5439255052E8008D66B0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				504A46949DA7A52EE4ECF2D6 /* Pods_BlindTigerTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AC5C5444255052E8008D66B0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				27EDA5F21EF3891D51F312A2 /* Pods_BlindTiger_BlindTigerUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		21D785F50523E0A37E70950C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				45571985574E6E6E3FE153ED /* Pods_BlindTiger.framework */,
+				203EFEC5C9076CFCE78E3097 /* Pods_BlindTiger_BlindTigerUITests.framework */,
+				5B8A79E2AC92DE37ED8C880F /* Pods_BlindTigerTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		AC5C5422255052E5008D66B0 = {
+			isa = PBXGroup;
+			children = (
+				AC5C542D255052E5008D66B0 /* BlindTiger */,
+				AC5C543F255052E8008D66B0 /* BlindTigerTests */,
+				AC5C544A255052E8008D66B0 /* BlindTigerUITests */,
+				AC5C542C255052E5008D66B0 /* Products */,
+				CDC8460F5F8958AA4BE0A120 /* Pods */,
+				21D785F50523E0A37E70950C /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		AC5C542C255052E5008D66B0 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				AC5C542B255052E5008D66B0 /* BlindTiger.app */,
+				AC5C543C255052E8008D66B0 /* BlindTigerTests.xctest */,
+				AC5C5447255052E8008D66B0 /* BlindTigerUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		AC5C542D255052E5008D66B0 /* BlindTiger */ = {
+			isa = PBXGroup;
+			children = (
+				AC5C549625505E70008D66B0 /* ViewModel */,
+				AC5C549225505E66008D66B0 /* View */,
+				AC5C548B25505E55008D66B0 /* Model */,
+				AC5C542E255052E5008D66B0 /* BlindTigerApp.swift */,
+				AC36B4452592CAE800A1A038 /* TabViewWorkaround.swift */,
+				ACB7C36325A2235200CB6320 /* UploadImage.swift */,
+				ACB7C35E25A2177600CB6320 /* ImagePicker.swift */,
+				AC5C5430255052E5008D66B0 /* ContentView.swift */,
+				AC7D3538259413B2009C5573 /* TextFieldExtension.swift */,
+				ACB7C35025A0E58000CB6320 /* GoogleService-Info.plist */,
+				AC5C5432255052E7008D66B0 /* Assets.xcassets */,
+				AC928D152582FC83008B4871 /* PullToRefresh.swift */,
+				AC1C06E7256FF33E009A4694 /* KeyboardExtensions.swift */,
+				AC1C06E2256D90B3009A4694 /* navbarColorExtension.swift */,
+				AC1C06DD256D90A2009A4694 /* DateExtension.swift */,
+				AC2C1C3925651C2900C30014 /* Colors.swift */,
+				AC5C5437255052E7008D66B0 /* Info.plist */,
+				AC5C5434255052E7008D66B0 /* Preview Content */,
+			);
+			path = BlindTiger;
+			sourceTree = "<group>";
+		};
+		AC5C5434255052E7008D66B0 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				AC5C5435255052E7008D66B0 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		AC5C543F255052E8008D66B0 /* BlindTigerTests */ = {
+			isa = PBXGroup;
+			children = (
+				AC5C5440255052E8008D66B0 /* BlindTigerTests.swift */,
+				AC5C5442255052E8008D66B0 /* Info.plist */,
+			);
+			path = BlindTigerTests;
+			sourceTree = "<group>";
+		};
+		AC5C544A255052E8008D66B0 /* BlindTigerUITests */ = {
+			isa = PBXGroup;
+			children = (
+				AC5C544B255052E8008D66B0 /* BlindTigerUITests.swift */,
+				AC5C544D255052E8008D66B0 /* Info.plist */,
+			);
+			path = BlindTigerUITests;
+			sourceTree = "<group>";
+		};
+		AC5C548B25505E55008D66B0 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		AC5C549225505E66008D66B0 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				AC5C54A725506C44008D66B0 /* PreLoginView.swift */,
+				AC55BDF42559AAB100FDAC18 /* Welcome.swift */,
+				AC5C54DE255198B2008D66B0 /* Home.swift */,
+				ACE0C3482561A4CF0051C61D /* TabBar.swift */,
+				ACE0C3552561AEEE0051C61D /* SearchView.swift */,
+				ACE0C35A2561AEFD0051C61D /* NotificationView.swift */,
+				ACE0C35F2561AF230051C61D /* ProfileView.swift */,
+				AC2C1C3425651C1700C30014 /* NewPost.swift */,
+				ACF3C890256ACAB90045AB20 /* CommentView.swift */,
+				AC1C06F92572EB60009A4694 /* PeekView.swift */,
+				AC1C0708257562D4009A4694 /* NotSelfProfileView.swift */,
+				AC90AEDD258D76EF00D3FE6E /* PeekCommentView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		AC5C549625505E70008D66B0 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				ACEE2CE2255D539B00C6CE6C /* WelcomeViewModel.swift */,
+				AC2C1C3E25651DD600C30014 /* NewPostViewModel.swift */,
+				AC2C1C43256581F600C30014 /* HomeViewModel.swift */,
+				ACF3C895256ACB310045AB20 /* CommentViewModel.swift */,
+				AC1C06F42572C45A009A4694 /* SearchViewModel.swift */,
+				AC1C06FE2572EB7C009A4694 /* PeakViewModel.swift */,
+				AC1C070325747F92009A4694 /* ProfileViewModel.swift */,
+				AC928CFC257E87E4008B4871 /* NotificationViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		CDC8460F5F8958AA4BE0A120 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				0CF888BA81A0A59BAC789447 /* Pods-BlindTiger.debug.xcconfig */,
+				07F5EC5C86248DA72A441378 /* Pods-BlindTiger.release.xcconfig */,
+				27443F9BCDE5CE3CE62A543E /* Pods-BlindTiger-BlindTigerUITests.debug.xcconfig */,
+				89CBB4128EB493906098CE1E /* Pods-BlindTiger-BlindTigerUITests.release.xcconfig */,
+				C6D96EC208CDC9C2D687E738 /* Pods-BlindTigerTests.debug.xcconfig */,
+				535B4CCC29B49645A371CA7E /* Pods-BlindTigerTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		AC5C542A255052E5008D66B0 /* BlindTiger */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AC5C5450255052E8008D66B0 /* Build configuration list for PBXNativeTarget "BlindTiger" */;
+			buildPhases = (
+				5723B7F466D06958B45EFB8D /* [CP] Check Pods Manifest.lock */,
+				AC5C5427255052E5008D66B0 /* Sources */,
+				AC5C5428255052E5008D66B0 /* Frameworks */,
+				AC5C5429255052E5008D66B0 /* Resources */,
+				A7446AFA364698C07CE2A2F0 /* [CP] Embed Pods Frameworks */,
+				CCC1D0BDFD1A383713C18B68 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BlindTiger;
+			packageProductDependencies = (
+				AC4F4E1225A295A5004FE9D0 /* SDWebImageSwiftUI */,
+			);
+			productName = BlindTiger;
+			productReference = AC5C542B255052E5008D66B0 /* BlindTiger.app */;
+			productType = "com.apple.product-type.application";
+		};
+		AC5C543B255052E8008D66B0 /* BlindTigerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AC5C5453255052E8008D66B0 /* Build configuration list for PBXNativeTarget "BlindTigerTests" */;
+			buildPhases = (
+				802BF74FA9B6F766458B5583 /* [CP] Check Pods Manifest.lock */,
+				AC5C5438255052E8008D66B0 /* Sources */,
+				AC5C5439255052E8008D66B0 /* Frameworks */,
+				AC5C543A255052E8008D66B0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				AC5C543E255052E8008D66B0 /* PBXTargetDependency */,
+			);
+			name = BlindTigerTests;
+			productName = BlindTigerTests;
+			productReference = AC5C543C255052E8008D66B0 /* BlindTigerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		AC5C5446255052E8008D66B0 /* BlindTigerUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AC5C5456255052E8008D66B0 /* Build configuration list for PBXNativeTarget "BlindTigerUITests" */;
+			buildPhases = (
+				1D8AEE64ED59C7804713BFDD /* [CP] Check Pods Manifest.lock */,
+				AC5C5443255052E8008D66B0 /* Sources */,
+				AC5C5444255052E8008D66B0 /* Frameworks */,
+				AC5C5445255052E8008D66B0 /* Resources */,
+				0ECA7438769979C7DA334E4B /* [CP] Embed Pods Frameworks */,
+				EAE120DD8ECF4ECE3108520A /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				AC5C5449255052E8008D66B0 /* PBXTargetDependency */,
+			);
+			name = BlindTigerUITests;
+			productName = BlindTigerUITests;
+			productReference = AC5C5447255052E8008D66B0 /* BlindTigerUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		AC5C5423255052E5008D66B0 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1200;
+				LastUpgradeCheck = 1200;
+				TargetAttributes = {
+					AC5C542A255052E5008D66B0 = {
+						CreatedOnToolsVersion = 12.0.1;
+					};
+					AC5C543B255052E8008D66B0 = {
+						CreatedOnToolsVersion = 12.0.1;
+						TestTargetID = AC5C542A255052E5008D66B0;
+					};
+					AC5C5446255052E8008D66B0 = {
+						CreatedOnToolsVersion = 12.0.1;
+						TestTargetID = AC5C542A255052E5008D66B0;
+					};
+				};
+			};
+			buildConfigurationList = AC5C5426255052E5008D66B0 /* Build configuration list for PBXProject "BlindTiger" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = AC5C5422255052E5008D66B0;
+			packageReferences = (
+				ACB7C36825A28D3000CB6320 /* XCRemoteSwiftPackageReference "SDWebImage" */,
+				AC4F4E0925A2958F004FE9D0 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */,
+			);
+			productRefGroup = AC5C542C255052E5008D66B0 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				AC5C542A255052E5008D66B0 /* BlindTiger */,
+				AC5C543B255052E8008D66B0 /* BlindTigerTests */,
+				AC5C5446255052E8008D66B0 /* BlindTigerUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		AC5C5429255052E5008D66B0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AC5C5436255052E7008D66B0 /* Preview Assets.xcassets in Resources */,
+				AC5C5433255052E7008D66B0 /* Assets.xcassets in Resources */,
+				ACB7C35125A0E58000CB6320 /* GoogleService-Info.plist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AC5C543A255052E8008D66B0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AC5C5445255052E8008D66B0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0ECA7438769979C7DA334E4B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BlindTiger-BlindTigerUITests/Pods-BlindTiger-BlindTigerUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BlindTiger-BlindTigerUITests/Pods-BlindTiger-BlindTigerUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-BlindTiger-BlindTigerUITests/Pods-BlindTiger-BlindTigerUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		1D8AEE64ED59C7804713BFDD /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-BlindTiger-BlindTigerUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5723B7F466D06958B45EFB8D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-BlindTiger-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		802BF74FA9B6F766458B5583 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-BlindTigerTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A7446AFA364698C07CE2A2F0 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BlindTiger/Pods-BlindTiger-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BlindTiger/Pods-BlindTiger-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-BlindTiger/Pods-BlindTiger-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CCC1D0BDFD1A383713C18B68 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BlindTiger/Pods-BlindTiger-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BlindTiger/Pods-BlindTiger-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-BlindTiger/Pods-BlindTiger-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EAE120DD8ECF4ECE3108520A /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BlindTiger-BlindTigerUITests/Pods-BlindTiger-BlindTigerUITests-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BlindTiger-BlindTigerUITests/Pods-BlindTiger-BlindTigerUITests-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-BlindTiger-BlindTigerUITests/Pods-BlindTiger-BlindTigerUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		AC5C5427255052E5008D66B0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AC2C1C44256581F600C30014 /* HomeViewModel.swift in Sources */,
+				AC1C06FA2572EB60009A4694 /* PeekView.swift in Sources */,
+				ACEE2CE3255D539B00C6CE6C /* WelcomeViewModel.swift in Sources */,
+				AC7D3539259413B2009C5573 /* TextFieldExtension.swift in Sources */,
+				AC55BDF52559AAB100FDAC18 /* Welcome.swift in Sources */,
+				AC1C06E8256FF33E009A4694 /* KeyboardExtensions.swift in Sources */,
+				AC1C070425747F92009A4694 /* ProfileViewModel.swift in Sources */,
+				AC2C1C3A25651C2900C30014 /* Colors.swift in Sources */,
+				ACE0C35B2561AEFD0051C61D /* NotificationView.swift in Sources */,
+				AC2C1C3F25651DD600C30014 /* NewPostViewModel.swift in Sources */,
+				AC1C06FF2572EB7C009A4694 /* PeakViewModel.swift in Sources */,
+				ACE0C3562561AEEE0051C61D /* SearchView.swift in Sources */,
+				AC2C1C3525651C1700C30014 /* NewPost.swift in Sources */,
+				AC928D162582FC83008B4871 /* PullToRefresh.swift in Sources */,
+				ACF3C896256ACB310045AB20 /* CommentViewModel.swift in Sources */,
+				AC5C54A825506C44008D66B0 /* PreLoginView.swift in Sources */,
+				AC928CFD257E87E4008B4871 /* NotificationViewModel.swift in Sources */,
+				AC5C5431255052E5008D66B0 /* ContentView.swift in Sources */,
+				AC5C542F255052E5008D66B0 /* BlindTigerApp.swift in Sources */,
+				ACB7C36425A2235200CB6320 /* UploadImage.swift in Sources */,
+				ACE0C3492561A4CF0051C61D /* TabBar.swift in Sources */,
+				AC1C06DE256D90A2009A4694 /* DateExtension.swift in Sources */,
+				AC1C06E3256D90B3009A4694 /* navbarColorExtension.swift in Sources */,
+				ACB7C35F25A2177600CB6320 /* ImagePicker.swift in Sources */,
+				AC5C54DF255198B2008D66B0 /* Home.swift in Sources */,
+				AC1C06F52572C45A009A4694 /* SearchViewModel.swift in Sources */,
+				ACE0C3602561AF230051C61D /* ProfileView.swift in Sources */,
+				ACF3C891256ACAB90045AB20 /* CommentView.swift in Sources */,
+				AC1C0709257562D4009A4694 /* NotSelfProfileView.swift in Sources */,
+				AC90AEDE258D76EF00D3FE6E /* PeekCommentView.swift in Sources */,
+				AC36B4462592CAE800A1A038 /* TabViewWorkaround.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AC5C5438255052E8008D66B0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AC5C5441255052E8008D66B0 /* BlindTigerTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AC5C5443255052E8008D66B0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AC5C544C255052E8008D66B0 /* BlindTigerUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		AC5C543E255052E8008D66B0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AC5C542A255052E5008D66B0 /* BlindTiger */;
+			targetProxy = AC5C543D255052E8008D66B0 /* PBXContainerItemProxy */;
+		};
+		AC5C5449255052E8008D66B0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AC5C542A255052E5008D66B0 /* BlindTiger */;
+			targetProxy = AC5C5448255052E8008D66B0 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		AC5C544E255052E8008D66B0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		AC5C544F255052E8008D66B0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		AC5C5451255052E8008D66B0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0CF888BA81A0A59BAC789447 /* Pods-BlindTiger.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1.5;
+				DEVELOPMENT_ASSET_PATHS = "\"BlindTiger/Preview Content\"";
+				DEVELOPMENT_TEAM = RSCT893G95;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = BlindTiger/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.5;
+				PRODUCT_BUNDLE_IDENTIFIER = com.DanteDelgado.BlindTiger;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		AC5C5452255052E8008D66B0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 07F5EC5C86248DA72A441378 /* Pods-BlindTiger.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1.5;
+				DEVELOPMENT_ASSET_PATHS = "\"BlindTiger/Preview Content\"";
+				DEVELOPMENT_TEAM = RSCT893G95;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = BlindTiger/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.5;
+				PRODUCT_BUNDLE_IDENTIFIER = com.DanteDelgado.BlindTiger;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		AC5C5454255052E8008D66B0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C6D96EC208CDC9C2D687E738 /* Pods-BlindTigerTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = BlindTigerTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.DanteDelgado.BlindTigerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BlindTiger.app/BlindTiger";
+			};
+			name = Debug;
+		};
+		AC5C5455255052E8008D66B0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 535B4CCC29B49645A371CA7E /* Pods-BlindTigerTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = BlindTigerTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.DanteDelgado.BlindTigerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BlindTiger.app/BlindTiger";
+			};
+			name = Release;
+		};
+		AC5C5457255052E8008D66B0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 27443F9BCDE5CE3CE62A543E /* Pods-BlindTiger-BlindTigerUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = BlindTigerUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.DanteDelgado.BlindTigerUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = BlindTiger;
+			};
+			name = Debug;
+		};
+		AC5C5458255052E8008D66B0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 89CBB4128EB493906098CE1E /* Pods-BlindTiger-BlindTigerUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = BlindTigerUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.DanteDelgado.BlindTigerUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = BlindTiger;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		AC5C5426255052E5008D66B0 /* Build configuration list for PBXProject "BlindTiger" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AC5C544E255052E8008D66B0 /* Debug */,
+				AC5C544F255052E8008D66B0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AC5C5450255052E8008D66B0 /* Build configuration list for PBXNativeTarget "BlindTiger" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AC5C5451255052E8008D66B0 /* Debug */,
+				AC5C5452255052E8008D66B0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AC5C5453255052E8008D66B0 /* Build configuration list for PBXNativeTarget "BlindTigerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AC5C5454255052E8008D66B0 /* Debug */,
+				AC5C5455255052E8008D66B0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AC5C5456255052E8008D66B0 /* Build configuration list for PBXNativeTarget "BlindTigerUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AC5C5457255052E8008D66B0 /* Debug */,
+				AC5C5458255052E8008D66B0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		AC4F4E0925A2958F004FE9D0 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImageSwiftUI.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.5.0;
+			};
+		};
+		ACB7C36825A28D3000CB6320 /* XCRemoteSwiftPackageReference "SDWebImage" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImage.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.10.2;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		AC4F4E1225A295A5004FE9D0 /* SDWebImageSwiftUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = AC4F4E0925A2958F004FE9D0 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */;
+			productName = SDWebImageSwiftUI;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = AC5C5423255052E5008D66B0 /* Project object */;
+}

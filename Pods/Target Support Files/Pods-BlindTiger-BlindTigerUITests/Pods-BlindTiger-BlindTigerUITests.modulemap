@@ -1,0 +1,6 @@
+framework module Pods_BlindTiger_BlindTigerUITests {
+  umbrella header "Pods-BlindTiger-BlindTigerUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}
