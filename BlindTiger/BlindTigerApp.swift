@@ -21,12 +21,13 @@ struct BlindTigerApp: App {
         WindowGroup {
             let hasSignedIn = UserDefaults.standard.bool(forKey: "hasSignedIn")
             
+            
                if hasSignedIn == false {
             
-            PreLoginView(info: self.delegate)
+            SignInView()
             }
                         else{
-                            TabBar(selectedTab: 0)
+                            TabBarView(selectedTab: 0)
                         }
             
         }
@@ -35,7 +36,6 @@ struct BlindTigerApp: App {
     
     
 }
-
 
 //initialize firebase
 class AppDelegate: NSObject, UIApplicationDelegate, GIDSignInDelegate, ObservableObject {
@@ -99,4 +99,23 @@ class AppDelegate: NSObject, UIApplicationDelegate, GIDSignInDelegate, Observabl
 }
 
 
+let db = Firestore.firestore()
+//drop everything up to @
+let email = Auth.auth().currentUser?.email?.drop(while: { (Character) -> Bool in
+    return Character != "@"
+})
+
+var currentSchool = email?.dropLast(4).drop(while: { (Character) -> Bool in
+    if (email?.filter({ $0 == "." }).count)! > 1 {
+        //if theres multiple . then delete everything up to the first one
+        return Character != "."
+    }
+    else{
+        //if not then delete everything up to the @
+        return Character != "@"
+    }
+}).dropFirst(1)
+
+
+let cleanSchool = String(currentSchool ?? "")
 
