@@ -11,19 +11,19 @@
 //
 //
 //class homeViewModel: ObservableObject {
-//    
+//
 //    @Published var posts = [post]()
 //    @Published var goPreLogin = false
 //    @Published var initialLoading = true
 //    @Published var numberOfPostsLoaded = 30
-//    
-//    
+//
+//
 //    let db = Firestore.firestore()
-//    
+//
 //    func fetchData() {
 //        if Auth.auth().currentUser != nil {
 //            // to make it not real time just use .getdocuments instead of addsnapshotlistner
-//            
+//
 //            db.collection("BlindTiger").document("\(cleanSchool)").collection("posts").order(by: "time", descending: true).limit(to: numberOfPostsLoaded).getDocuments() { (querySnapshot, error) in
 //                //make sure something is in posts
 //                guard let documents = querySnapshot?.documents else{
@@ -31,11 +31,11 @@
 //                    return
 //                }
 //                // map data to a post struct
-//                
+//
 //                self.posts = documents.map { (queryDocumentSnapshot) -> post in
 //                    let data = queryDocumentSnapshot.data()
-//                    
-//                    
+//
+//
 //                    let content = data["content"] as? String ?? ""
 //                    let authoruid = data["authoruid"] as? String ?? ""
 //                    let time = data["time"] as? Timestamp ?? Timestamp.init()
@@ -44,50 +44,50 @@
 //                    let id = data["id"] as? String ?? ""
 //                    let autherusername = data["authorusername"] as? String ?? ""
 //                    let reports = data["reports"] as? Int ?? 0
-//                    
-//                    
-//                    
+//
+//
+//
 //                    if reports >= 5 {
 //                        self.db.collection("BlindTiger").document(cleanSchool).collection("posts").document(id).delete()
 //                    }
-//                    
-//                    
+//
+//
 //                    return post(id: id, content: content, votes: votes, time: time, authoruid: authoruid, anonymous: anonymous, authorusername: autherusername, reports: reports)
-//                    
+//
 //                }
 //                self.initialLoading = false
-//                
+//
 //            }
-//           
+//
 //        }
 //        else{
 //            //if somehow no user is signed in the go to prelogin
 //            goPreLogin = true
 //        }
-//        
+//
 //    }
-//    
+//
 //    @Published var loading: Bool = false {
-//        
+//
 //        didSet {
 //            if oldValue == false && loading == true {
 //                self.load()
 //            }
 //        }
 //    }
-//    
+//
 //    func load() {
 //        DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(1)) {
-//            
+//
 //            self.fetchData();
-//            
+//
 //            self.loading = false
-//            
-//            
+//
+//
 //        }
 //    }
-//    
-//    
+//
+//
 //}
 //
 //
@@ -136,11 +136,11 @@
 //    @State var showDeleteAlert = false
 //    @State var showBlockAlert = false
 //    @Binding var blockedUsers: [String]
-//    
+//
 //    var body: some View {
-//        
+//
 //        let date = time.dateValue()
-//        
+//
 //        ZStack{
 //            //this V stack is the card view (other stuff is the report pop up)
 //            VStack{
@@ -155,14 +155,14 @@
 //                        label: {Text("\(authorusername.trimmingCharacters(in: .whitespacesAndNewlines)) ").lineLimit(1)})
 //                        NavigationLink(destination: NotSelfProfileView(userID: authoruid, blockedUsers: $blockedUsers), isActive: $goProfile) {
 //                            EmptyView()}
-//                      
+//
 //                    }
 //                    Text("◦ \(date.timeAgoDisplay())").foregroundColor(.gray).lineLimit(1).layoutPriority(0.9)
 //                    Spacer()
 //                    Button(action: {showReportPopUp.toggle()}, label: {
 //                        Image(systemName: "ellipsis").foregroundColor(.gray).padding(7)
 //                    }).offset(y: -10)
-//                    
+//
 //                }.padding(.bottom, 5.0)
 //                // content and votes
 //                HStack{
@@ -178,7 +178,7 @@
 //                                    downvote = false
 //                                    db.collection("BlindTiger").document(cleanSchool).collection("posts").document(id).updateData(["votes" : FieldValue.increment(Int64(2))])
 //                                    votes += 2
-//                                    
+//
 //                                }
 //                                else {
 //                                    // TEST change for how much one upvote upvotes
@@ -196,11 +196,11 @@
 //                                .foregroundColor(upvote == true ? .orange : .gray)
 //                                .font(.title).padding([.top, .bottom, .trailing], 5.0)
 //                        })
-//                        
+//
 //                        Text("\(votes)").font(.title).padding(.trailing, 5.0).lineLimit(1).allowsTightening(true)
 //                        Button(action: {
-//                            
-//                            
+//
+//
 //                            downvote.toggle();
 //                            UserDefaults.standard.set(self.downvote, forKey: "\(id)downvoted");
 //                            UserDefaults.standard.set(false, forKey: "\(id)upvoted")
@@ -225,13 +225,13 @@
 //                                .foregroundColor(downvote == true ? .orange : .gray)
 //                                .font(.title).padding([.top, .bottom, .trailing], 5.0)
 //                        })
-//                        
-//                        
-//                        
+//
+//
+//
 //                    }
 //                }
 //                HStack{
-//                    
+//
 //                    NavigationLink(
 //                        destination: CommentView(content: content, votes: votes, time: time, authoruid: authoruid, anonymous: anonymous, id: id, authorusername: authorusername, blockedUsers: $blockedUsers),
 //                        label: {
@@ -241,20 +241,20 @@
 //
 //                            }
 //                           })
-//                    
+//
 //                    Spacer()
 //                }.padding(.top, 5)
 //            }
 //            .padding()
 //            .background(RoundedRectangle(cornerRadius: 10).foregroundColor(.white).shadow(color: Color.black.opacity(0.15), radius: 6)).padding(.horizontal).padding(.vertical, 5)
-//            
+//
 //            if showReportPopUp == true {
 //                //my own post (delete)
 //                if authoruid == Auth.auth().currentUser?.uid {
 //                    ZStack {
 //                        Color.white
 //                        VStack(spacing: 0) {
-//                            
+//
 //                            Button(action: {
 //                                showDeleteAlert = true
 //                            }, label: {
@@ -262,7 +262,7 @@
 //                                    .frame(width: 300.0, height: 75)
 //                                    .padding(.horizontal)
 //                            })
-//                
+//
 //                            ZStack{
 //                                Button(action: {
 //                                    showReportPopUp = false
@@ -271,8 +271,8 @@
 //                                })
 //                                Rectangle().foregroundColor(.gray).frame(height: 1).offset(y: -25).opacity(0.5)
 //                            }
-//                            
-//                            
+//
+//
 //                        }
 //                    }.alert(isPresented: $showDeleteAlert, content: {
 //                                Alert(title: Text("Delete Post?"), message: Text("There is no way to recover a post once deleted."), primaryButton: .default(Text("Cancel")) {showReportPopUp = false}, secondaryButton: .destructive(Text("Delete")) {db.collection("BlindTiger").document(cleanSchool).collection("posts").document(id).delete(); showReportPopUp = false })})
@@ -284,14 +284,14 @@
 //                    ZStack {
 //                        Color.white
 //                        VStack(spacing: 0) {
-//                            
+//
 //                            Button(action: {reported.toggle();
 //                                UserDefaults.standard.set(reported, forKey: "\(id)reported");
 //                                if reported == true {db.collection("BlindTiger").document(cleanSchool).collection("posts").document(id).updateData(["reports" : FieldValue.increment(Int64(1))])}
 //                                else {
 //                                    db.collection("BlindTiger").document(cleanSchool).collection("posts").document(id).updateData(["reports" : FieldValue.increment(Int64(-1))])
 //                                }
-//                               
+//
 //                            }, label: {
 //                                HStack{
 //                                    Text("Report").foregroundColor(.red).fontWeight(.semibold)
@@ -302,11 +302,11 @@
 //                                    else{
 //                                        Image(systemName: "square").foregroundColor(.red).font(.title2)
 //                                    }
-//                                    
+//
 //                                }.padding(.horizontal)
 //                                .frame(width: 300.0, height: 50)
 //                            })
-//                            
+//
 //                            Button(action: {
 ////                               if blockedUsers.contains(authoruid) {blockedUsers.removeAll(where: {$0 == authoruid})
 ////                                    //UserDefaults.standard.set(blockedUsers, forKey: "blockedUsers")
@@ -315,29 +315,29 @@
 ////                                blockedUsers.append(authoruid)
 ////                                UserDefaults.standard.set(blockedUsers, forKey: "blockedUsers")
 ////                                showReportPopUp = false
-//                               
+//
 //                            }, label: {
 //                                HStack{
 //
 //                                        Text("Block User").foregroundColor(.black).padding(.horizontal)//}
-//                    
+//
 //                                    Spacer()
 //                                }
 //                            }).frame(width: 300.0, height: 50)
-//                            
+//
 //                            ZStack{
 //                                Button(action: {
 //                                    print(blockedUsers)
 //                                    showReportPopUp = false
 //                                }, label: {
-//                                    
+//
 //                                    Text("Close").foregroundColor(.blue).frame(width: 300.0, height: 50)
-//                                    
+//
 //                                })
 //                                Rectangle().foregroundColor(.gray).frame(height: 1).offset(y: -25).opacity(0.5)
 //                            }
-//                            
-//                            
+//
+//
 //                        }
 //                    }.alert(isPresented: $showBlockAlert, content: {
 //                                Alert(title: Text("Block User?"), message: Text("Are you sure you want to block this user?"), primaryButton: .default(Text("Cancel")) {showReportPopUp = false}, secondaryButton: .destructive(Text("Block")) {blockedUsers.append(authoruid)
@@ -348,28 +348,28 @@
 //                }
 //            }
 //        }
-//        
-//        
+//
+//
 //        // get the number of comments
 //        .onAppear() {
 //            db.collection("BlindTiger").document(cleanSchool).collection("posts").document(id).collection("comments").getDocuments
 //            {(querySnapshot, err) in
-//                
+//
 //                if let err = err {print("Error getting documents: \(err)")}
 //                else{
 //                    return self.numberOfComments = querySnapshot!.count
 //                }
 //            }
-//            
+//
 //        }
 //        //extra assurance that user defaults saved everything
 //        .onDisappear(){
 //            upvote = UserDefaults.standard.bool(forKey: "\(id)upvoted");
 //            downvote = UserDefaults.standard.bool(forKey: "\(id)downvoted");
 //            reported = UserDefaults.standard.bool(forKey: "\(id)reported");
-//            
+//
 //        }
-//        
+//
 //    }
 //}
 //

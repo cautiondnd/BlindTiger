@@ -14,16 +14,16 @@
 //    @Published var selectedTab = 2
 //    @Published var dbErr = false
 //    @Published var validationError = false
-//    
+//
 //    //TEST
-////    @Published var reusedPost: post = post(id: "8quL3ClusBMpVfSSriPq", content: "Literally fuck corona virus", votes: 7, time: Timestamp(seconds: Int64(UserDefaults.standard.integer(forKey: "reusedPostTime")), nanoseconds: Int32(UserDefaults.standard.integer(forKey: "reusedPostNanoSecondsTime"))), authoruid: "aDZm0jZ1F2ZfSSGyoYnjYA6OwIo1", anonymous: true, authorusername: "cautiondnd", reports: 0)
+//    @Published var reusedPost: post = post(id: "8quL3ClusBMpVfSSriPq", content: "Literally fuck corona virus", votes: 7, time: Timestamp(seconds: Int64(UserDefaults.standard.integer(forKey: "reusedPostTime")), nanoseconds: Int32(UserDefaults.standard.integer(forKey: "reusedPostNanoSecondsTime"))), authoruid: "aDZm0jZ1F2ZfSSGyoYnjYA6OwIo1", anonymous: true, authorusername: "cautiondnd", reports: 0)
 //
 //  //  @Published var showAnonAlert = false
 //
 //
 //
-//    
-//    
+//
+//
 //    let db = Firestore.firestore()
 //    func newPost() {
 //        //make sure something is written and its less than 240 charecters
@@ -35,14 +35,14 @@
 //            self.selectedTab = 0
 //
 //            let uid = Auth.auth().currentUser!.uid
-//            
+//
 //            db.collection("BlindTiger").document(cleanSchool).collection("users").document(uid).getDocument { [self] (document, error) in
 //                //if user exists and has a username go onto making the post
 //                if let document = document, document.exists {
 //                    let authorusername = document.get("username") as! String
 //
-//                    
-//                    
+//
+//
 //                       //create new post and pass in data
 //                    let userPost = db.collection("BlindTiger").document(cleanSchool).collection("posts").addDocument(data: ["content" : newPostContent.trimmingCharacters(in: .whitespacesAndNewlines), "authoruid" : uid, "votes" : 0, "anonymous" : isAnonymous, "reports" : 0, "time" : Date(), "authorusername" : authorusername]) { (err) in
 //                               if err != nil {
@@ -56,14 +56,14 @@
 //                           //add document id as a field
 //                           let userPostID = userPost.documentID
 //                           db.collection("BlindTiger").document(cleanSchool).collection("posts").document(userPostID).setData(["id" : userPostID], merge: true)
-//                       
 //
 //
-//                    
+//
+//
 //                    }
 //
 //            }
-//       
+//
 //    }
 //
 //}
@@ -145,6 +145,6 @@
 ////}
 ////
 //
-//    
-//    
+//
+//
 //}
