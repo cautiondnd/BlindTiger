@@ -54,6 +54,10 @@
 		ACE0C3562561AEEE0051C61D /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACE0C3552561AEEE0051C61D /* SearchView.swift */; };
 		ACE0C35B2561AEFD0051C61D /* NotificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACE0C35A2561AEFD0051C61D /* NotificationView.swift */; };
 		ACE0C3602561AF230051C61D /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACE0C35F2561AF230051C61D /* ProfileView.swift */; };
+		ACEE294C2862196600AD9B89 /* PeekModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACEE294B2862196600AD9B89 /* PeekModel.swift */; };
+		ACEE294E2862197700AD9B89 /* PeekSchoolView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACEE294D2862197700AD9B89 /* PeekSchoolView.swift */; };
+		ACEE2951286234EE00AD9B89 /* PeekSchoolModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACEE2950286234EE00AD9B89 /* PeekSchoolModel.swift */; };
+		ACEE295328627BFA00AD9B89 /* CommentModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACEE295228627BFA00AD9B89 /* CommentModel.swift */; };
 		ACEE2CE3255D539B00C6CE6C /* WelcomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACEE2CE2255D539B00C6CE6C /* WelcomeViewModel.swift */; };
 		ACF3C891256ACAB90045AB20 /* CommentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACF3C890256ACAB90045AB20 /* CommentView.swift */; };
 		ACF3C896256ACB310045AB20 /* CommentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACF3C895256ACB310045AB20 /* CommentViewModel.swift */; };
@@ -134,6 +138,10 @@
 		ACE0C3552561AEEE0051C61D /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
 		ACE0C35A2561AEFD0051C61D /* NotificationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationView.swift; sourceTree = "<group>"; };
 		ACE0C35F2561AF230051C61D /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		ACEE294B2862196600AD9B89 /* PeekModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeekModel.swift; sourceTree = "<group>"; };
+		ACEE294D2862197700AD9B89 /* PeekSchoolView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeekSchoolView.swift; sourceTree = "<group>"; };
+		ACEE2950286234EE00AD9B89 /* PeekSchoolModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeekSchoolModel.swift; sourceTree = "<group>"; };
+		ACEE295228627BFA00AD9B89 /* CommentModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentModel.swift; sourceTree = "<group>"; };
 		ACEE2CE2255D539B00C6CE6C /* WelcomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewModel.swift; sourceTree = "<group>"; };
 		ACF3C890256ACAB90045AB20 /* CommentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentView.swift; sourceTree = "<group>"; };
 		ACF3C895256ACB310045AB20 /* CommentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentViewModel.swift; sourceTree = "<group>"; };
@@ -202,6 +210,7 @@
 				AC0D1F09285968B2005AE4BB /* HomeModel.swift */,
 				AC0D1F0D285968B2005AE4BB /* HomeCommentView.swift */,
 				AC84848F285985C900FC2D01 /* HomeCardView.swift */,
+				ACEE295228627BFA00AD9B89 /* CommentModel.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -226,6 +235,8 @@
 			isa = PBXGroup;
 			children = (
 				AC0D1F13285968B2005AE4BB /* PeekHomeView.swift */,
+				ACEE294B2862196600AD9B89 /* PeekModel.swift */,
+				ACEE294F2862347C00AD9B89 /* PeekSchoolView */,
 			);
 			path = Peek;
 			sourceTree = "<group>";
@@ -358,6 +369,15 @@
 				AC36B4452592CAE800A1A038 /* TabViewWorkaround.swift */,
 			);
 			path = Other;
+			sourceTree = "<group>";
+		};
+		ACEE294F2862347C00AD9B89 /* PeekSchoolView */ = {
+			isa = PBXGroup;
+			children = (
+				ACEE294D2862197700AD9B89 /* PeekSchoolView.swift */,
+				ACEE2950286234EE00AD9B89 /* PeekSchoolModel.swift */,
+			);
+			path = PeekSchoolView;
 			sourceTree = "<group>";
 		};
 		CDC8460F5F8958AA4BE0A120 /* Pods */ = {
@@ -658,6 +678,7 @@
 				AC1C06FA2572EB60009A4694 /* PeekView.swift in Sources */,
 				AC0D1F18285968B2005AE4BB /* HomeModel.swift in Sources */,
 				ACEE2CE3255D539B00C6CE6C /* WelcomeViewModel.swift in Sources */,
+				ACEE294E2862197700AD9B89 /* PeekSchoolView.swift in Sources */,
 				AC7D3539259413B2009C5573 /* TextFieldExtension.swift in Sources */,
 				AC0D1F20285968B2005AE4BB /* BulletinView.swift in Sources */,
 				AC0D1F19285968B2005AE4BB /* RatingsView.swift in Sources */,
@@ -667,6 +688,7 @@
 				AC848490285985C900FC2D01 /* HomeCardView.swift in Sources */,
 				AC1C06E8256FF33E009A4694 /* KeyboardExtensions.swift in Sources */,
 				AC1C070425747F92009A4694 /* ProfileViewModel.swift in Sources */,
+				ACEE2951286234EE00AD9B89 /* PeekSchoolModel.swift in Sources */,
 				AC0D1F1D285968B2005AE4BB /* SelfProfileView.swift in Sources */,
 				AC2C1C3A25651C2900C30014 /* Colors.swift in Sources */,
 				ACE0C35B2561AEFD0051C61D /* NotificationView.swift in Sources */,
@@ -680,6 +702,7 @@
 				ACF3C896256ACB310045AB20 /* CommentViewModel.swift in Sources */,
 				AC5C54A825506C44008D66B0 /* PreLoginView.swift in Sources */,
 				AC0D1F16285968B2005AE4BB /* HomeView.swift in Sources */,
+				ACEE295328627BFA00AD9B89 /* CommentModel.swift in Sources */,
 				AC928CFD257E87E4008B4871 /* NotificationViewModel.swift in Sources */,
 				AC5C542F255052E5008D66B0 /* BlindTigerApp.swift in Sources */,
 				ACB7C36425A2235200CB6320 /* UploadImage.swift in Sources */,
@@ -690,6 +713,7 @@
 				ACB7C35F25A2177600CB6320 /* ImagePicker.swift in Sources */,
 				AC5C54DF255198B2008D66B0 /* Home.swift in Sources */,
 				AC1C06F52572C45A009A4694 /* SearchViewModel.swift in Sources */,
+				ACEE294C2862196600AD9B89 /* PeekModel.swift in Sources */,
 				ACE0C3602561AF230051C61D /* ProfileView.swift in Sources */,
 				ACF3C891256ACAB90045AB20 /* CommentView.swift in Sources */,
 				AC1C0709257562D4009A4694 /* NotSelfProfileView.swift in Sources */,

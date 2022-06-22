@@ -346,17 +346,17 @@
 //    }
 //}
 //
-//struct comment: Identifiable, Hashable {
-//    var id: String
-//    var postid: String
-//    var content: String
-//    var votes: Int
-//    var time: Timestamp
-//    var authoruid: String
-//    var anonymous: Bool
-//    var authorusername : String
-//    var reports : Int
-//}
+////struct comment: Identifiable, Hashable {
+////    var id: String
+////    var postid: String
+////    var content: String
+////    var votes: Int
+////    var time: Timestamp
+////    var authoruid: String
+////    var anonymous: Bool
+////    var authorusername : String
+////    var reports : Int
+////}
 //
 //
 //

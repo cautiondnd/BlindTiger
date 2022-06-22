@@ -29,17 +29,17 @@
 //                        self.notEmptySchools.insert(School(id: name, name: name))}}
 //                }
 //            }
-//            
-//            //not using the map underneath anymore but keeping it incase there are problems
-//            // map data to a post struct
+////
+////            not using the map underneath anymore but keeping it incase there are problems
+////             map data to a post struct
 ////            self.schools.formUnion( documents.map { (queryDocumentSnapshot) -> School in
-////                
-////                
+////
+////
 ////                var name = queryDocumentSnapshot.documentID.capitalized
 ////                if name.count < 4 {name = name.uppercased()}
-////                
+////
 ////                return School(id: name, name: name)
-////                
+////
 ////            })
 //            
 //        }
@@ -47,7 +47,7 @@
 //    }
 //}
 //
-//struct School: Identifiable, Hashable {
-//    var id: String
-//    var name: String
-//}
+////struct School: Identifiable, Hashable {
+////    var id: String
+////    var name: String
+////}

@@ -19,16 +19,17 @@ struct BlindTigerApp: App {
     
     var body: some Scene {
         WindowGroup {
-            let hasSignedIn = UserDefaults.standard.bool(forKey: "hasSignedIn")
-            
-            
-               if hasSignedIn == false {
-            
-            SignInView()
-            }
-                        else{
-                            TabBarView(selectedTab: 0)
-                        }
+            TabBarView(info: AppDelegate(), selectedTab: 0)
+//            let hasSignedIn = UserDefaults.standard.bool(forKey: "hasSignedIn")
+//
+//
+//               if hasSignedIn == false {
+//
+//            SignInView()
+//            }
+//                        else{
+//                            TabBarView(selectedTab: 0)
+//                        }
             
         }
         
@@ -41,10 +42,9 @@ struct BlindTigerApp: App {
 class AppDelegate: NSObject, UIApplicationDelegate, GIDSignInDelegate, ObservableObject {
     
     
-    
+    @Published var hasNotSignedIn = true
     @Published var showAlert = false
-    @Published var goWelcome = false
-    @Published var goHome = false
+
     
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
@@ -74,17 +74,21 @@ class AppDelegate: NSObject, UIApplicationDelegate, GIDSignInDelegate, Observabl
                 let uid = Auth.auth().currentUser?.uid
                 
                 if (Auth.auth().currentUser?.email?.hasSuffix(".edu"))! || Auth.auth().currentUser?.email == "blindtigertesting@gmail.com"{
-                    db.collection("BlindTiger").document(cleanSchool).collection("users").document(uid!).getDocument { (document, error) in
-                        if let document = document, document.exists {
-                            self.goHome = true;
-                            UserDefaults.standard.set(true, forKey: "hasSignedIn")
-                        } else {
-                            self.goWelcome = true
-                        }
+                 
+                    db.collection("BlindTiger").document(cleanSchool).collection("users").document(uid!).setData([
+                        
+                        "username": Auth.auth().currentUser?.displayName ?? "",
+                        "uid": uid ?? "",
+                        "email": Auth.auth().currentUser?.email ?? "",
+                        "dateCreated": Date(),
+                        
+                    ]) { err in
+                        if err != nil {}
+                        else {self.hasNotSignedIn = false; print("acc created")}
                     }
                 }
                 else {
-                    self.showAlert = true
+                    self.showAlert = true; print("alert showing")
                 }
                 
             }
@@ -118,5 +122,5 @@ var currentSchool = email?.dropLast(4).drop(while: { (Character) -> Bool in
 
 
 //let cleanSchool = String(currentSchool ?? "")
-let cleanSchool = "vanderbilt"
+let cleanSchool = "bates"
 

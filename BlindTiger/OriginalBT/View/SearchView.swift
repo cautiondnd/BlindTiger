@@ -14,11 +14,11 @@
 //    @Binding var peekBlockedUsers: [String]
 //  //  init() { UITableView.appearance().backgroundColor = .clear }
 //
-//    
+//
 //    var body: some View {
-//        
+//
 //        let schools = searchData.notEmptySchools
-//        
+//
 //        NavigationView{
 //            VStack(spacing: 0){
 //            ZStack{
@@ -27,10 +27,10 @@
 //            TextField("Search", text: $schoolSearch)
 //                .padding(6)
 //                .background(Capsule().foregroundColor(.white)).padding(.horizontal)
-//                
-//                
+//
+//
 //                }
-//                
+//
 //                //FOR TESTING
 ////                HStack{
 ////                    Button(action: {cleanSchool = "bates"}, label: {
@@ -52,17 +52,17 @@
 //////                        Text("umd")
 //////                    })
 //////
-//////                    
-//////                    
+//////
+//////
 ////                }
 //                // ^testing only
-//                
+//
 //            //change baclgroundcolor
 //            if schoolSearch.isEmpty{
 //        List(
 //            schools.sorted(by: { $0.name < $1.name })
 //        ) { school in
-//            
+//
 //            NavigationLink(
 //                destination: PeekView(selectedSchool: school.name.lowercased(), peekBlockedUsers: $peekBlockedUsers),
 //                label: {
@@ -70,18 +70,18 @@
 //
 //                }
 //            )
-//            
+//
 //        }
 //        .shadow(color: Color.black.opacity(0.15), radius: 6)
-//        
+//
 //        .listStyle(InsetGroupedListStyle())
 //
-//       
-//    
-//            
+//
+//
+//
 //            }
 //            else {
-//                
+//
 //                List(
 //                    schools.filter { $0.name.uppercased().hasPrefix(schoolSearch.uppercased().trimmingCharacters(in: .whitespacesAndNewlines)) }.sorted(by: { $0.name < $1.name })
 //                ) { school in
@@ -91,12 +91,12 @@
 //                            Text(school.name)
 //
 //                        })
-//                        
+//
 //
 //                }.shadow(color: Color.black.opacity(0.15), radius: 6)
 //                .listStyle(InsetGroupedListStyle())
 //            }
-//            
+//
 //        }
 //
 //            .background(Rectangle().foregroundColor(.customGray).ignoresSafeArea(edges: .all))
@@ -115,12 +115,12 @@
 //            UITableView.appearance().backgroundColor = .clear
 //        }
 //
-//        
+//
 //    }
-//   
+//
 //        .navigationBarHidden(true)
 //        .background(Color.customGray)
-//        
+//
 //    }
 //}
 //
