@@ -9,25 +9,25 @@
 //import Firebase
 //
 //struct CommentView: View {
-//    
+//
 //    @State var textHeight: CGFloat = 0
 //    @State var cameFromSecondaryView = false
-//    
+//
 //    var textFieldHeight: CGFloat {
 //        let minHeight: CGFloat = 30
 //        let maxHeight: CGFloat = 70
-//        
+//
 //        if textHeight < minHeight {
 //            return minHeight
 //        }
-//        
+//
 //        if textHeight > maxHeight {
 //            return maxHeight
 //        }
-//        
+//
 //        return textHeight
 //    }
-//    
+//
 //    var content: String
 //    var votes: Int
 //    var time: Timestamp
@@ -36,19 +36,19 @@
 //    var id: String
 //    var authorusername: String
 //    @Binding var blockedUsers: [String]
-//    
+//
 //    @State var commentContent = ""
 //    @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
-//    
+//
 //    @ObservedObject var commentData = commentViewModel()
-//    
+//
 //    var body: some View {
 //        NavigationView{
-//            
-//            
+//
+//
 //            VStack(spacing: 0){
 //                cardCommentedOn(content: content, votes: votes, time: time, authoruid: authoruid, anonymous: anonymous, id: id, authorusername: authorusername, blockedUsers: $blockedUsers).background(Rectangle().foregroundColor(.white).shadow(color: Color.black.opacity(0.15), radius: 6)).padding(.vertical, 2)
-//                
+//
 //                if commentData.initialLoading == true{
 //                    VStack{
 //                        Spacer()
@@ -58,20 +58,20 @@
 //                }
 //                else {
 //                VStack{
-//                    
+//
 //                    ScrollView{
-//                        
+//
 //                        ForEach(commentData.comments.sorted(by: { $0.time.seconds < $1.time.seconds })) {comment in
 //                            if blockedUsers.contains(comment.authoruid) {}
 //                            else{
 //                            commentCardView(content: comment.content, votes: comment.votes, time: comment.time, authoruid: comment.authoruid, anonymous: comment.anonymous, postid: comment.postid, commentid: comment.id, authorusername: comment.authorusername, upvote:  UserDefaults.standard.bool(forKey: "\(comment.id)upvoted"), downvote:  UserDefaults.standard.bool(forKey: "\(comment.id)downvoted"), reports: comment.reports, reported: UserDefaults.standard.bool(forKey: "\(comment.id)reported"), blockedUsers: $blockedUsers)
 //                                }
 //                            }
-//                        
+//
 //                    }
 //                    .padding(.bottom, 2)
-//                    
-//                    
+//
+//
 //                }
 //                }
 //                //   ZStack{
@@ -83,48 +83,48 @@
 //                                    .font(.footnote)
 //                                    .fontWeight(.semibold)
 //                                    .foregroundColor(.gray)
-//                                
-//                                
+//
+//
 //                            })
 //                            .toggleStyle(CheckboxToggleStyle())
-//                            
+//
 //                            Spacer()
 //                            Text("\(commentData.newCommentContent.count)/240").font(.caption).foregroundColor(commentData.newCommentContent.count > 240 ? .red : .gray)
 //                        }.padding(.horizontal)
 //                        .offset(y: 3)
-//                        
+//
 //                    }
 //                    HStack{
 //                        ZStack(alignment: .topLeading) {
 //                            Color.white
-//                            
+//
 //                            if commentData.newCommentContent.isEmpty {
 //                                Text("Write a comment")
 //                                    .foregroundColor(Color(UIColor.placeholderText))
 //                                    .padding(4)
 //                            }
-//                            
+//
 //                            DynamicHeightTextField(text: $commentData.newCommentContent, height: $textHeight)//.padding()//.background(Capsule().foregroundColor(.white))
-//                            
+//
 //                        }
 //                        .frame(height: textFieldHeight)
-//                        
-//                        
+//
+//
 //                        Button(action: {
 //                            if commentData.uploadingComment == false{
 //                                commentData.newComment(id: id)}
 //                            else{}
-//                            
+//
 //                        }, label: {
 //                            Text("post").padding(.vertical, 10)
 //                        })
-//                        
+//
 //                    }.padding(.horizontal)
 //                    //.padding(.leading, 5)//controls indent
 //                    .background(Capsule().foregroundColor(.white))
 //                    .padding(.horizontal, 5)
 //                }
-//                
+//
 //                //                TextEditor(text: $commentData.newCommentContent)
 //                //                .padding()
 //                //                .background(Capsule().foregroundColor(.white)).frame(maxWidth: .infinity,maxHeight: 55, alignment: .center)//.padding(.horizontal)
@@ -145,23 +145,23 @@
 //                //
 //                //                }.padding()
 //                //                .clipShape(Capsule())
-//                
+//
 //                //      }
-//                
-//                
+//
+//
 //            }
-//            
+//
 //            //.navigationBarHidden(!cameFromHome)
 //            .background(Rectangle().foregroundColor(.customGray).ignoresSafeArea(edges: .all))
 //            //presmode dismiss makes the nav stack reset on tab changes
 //            .onAppear() {commentData.fetchData(id: id, selectedSchool: cleanSchool); self.presentationMode.wrappedValue.dismiss()}
 //            .onTapGesture {UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)}
-//            
-//            
+//
+//
 //            .navigationBarHidden(true)
-//            
+//
 //        }
-//        
+//
 //        .navigationBarHidden(cameFromSecondaryView)
 //        .navigationBarTitle(Text(""), displayMode: .inline)//.border(Color.black)
 //        //        .navigationBarBackButtonHidden(true)
@@ -178,13 +178,13 @@
 //                    .aspectRatio(contentMode: .fill)
 //                    .offset(y: 0)
 //            }
-//            
-//            
+//
+//
 //        }
 //        .navigationBarColor(UIColor(Color.customOrange))
-//        
+//
 //    }
-//    
+//
 //}
 //
 //
