@@ -38,6 +38,13 @@
 		AC36B4462592CAE800A1A038 /* TabViewWorkaround.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC36B4452592CAE800A1A038 /* TabViewWorkaround.swift */; };
 		AC4F4E1325A295A5004FE9D0 /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = AC4F4E1225A295A5004FE9D0 /* SDWebImageSwiftUI */; };
 		AC55BDF52559AAB100FDAC18 /* Welcome.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC55BDF42559AAB100FDAC18 /* Welcome.swift */; };
+		AC5BA29A28750E6E00EF66C5 /* BulletinCommentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC5BA29928750E6E00EF66C5 /* BulletinCommentView.swift */; };
+		AC5BA29C28750EF500EF66C5 /* BulletinCommentModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC5BA29B28750EF500EF66C5 /* BulletinCommentModel.swift */; };
+		AC5BA29E28762F6D00EF66C5 /* RatingCards.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC5BA29D28762F6D00EF66C5 /* RatingCards.swift */; };
+		AC5BA48B287C7F94002EE4D1 /* RatingsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC5BA48A287C7F94002EE4D1 /* RatingsModel.swift */; };
+		AC5BA48D287CB8B7002EE4D1 /* RatingCommentModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC5BA48C287CB8B7002EE4D1 /* RatingCommentModel.swift */; };
+		AC5BA48F287CB8CF002EE4D1 /* RatingCommentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC5BA48E287CB8CF002EE4D1 /* RatingCommentView.swift */; };
+		AC5BA491287CE9FB002EE4D1 /* NewOrgView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC5BA490287CE9FB002EE4D1 /* NewOrgView.swift */; };
 		AC5C542F255052E5008D66B0 /* BlindTigerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC5C542E255052E5008D66B0 /* BlindTigerApp.swift */; };
 		AC5C5433255052E7008D66B0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC5C5432255052E7008D66B0 /* Assets.xcassets */; };
 		AC5C5436255052E7008D66B0 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC5C5435255052E7008D66B0 /* Preview Assets.xcassets */; };
@@ -120,6 +127,13 @@
 		AC2C1C43256581F600C30014 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		AC36B4452592CAE800A1A038 /* TabViewWorkaround.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabViewWorkaround.swift; sourceTree = "<group>"; };
 		AC55BDF42559AAB100FDAC18 /* Welcome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Welcome.swift; sourceTree = "<group>"; };
+		AC5BA29928750E6E00EF66C5 /* BulletinCommentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BulletinCommentView.swift; sourceTree = "<group>"; };
+		AC5BA29B28750EF500EF66C5 /* BulletinCommentModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BulletinCommentModel.swift; sourceTree = "<group>"; };
+		AC5BA29D28762F6D00EF66C5 /* RatingCards.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingCards.swift; sourceTree = "<group>"; };
+		AC5BA48A287C7F94002EE4D1 /* RatingsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingsModel.swift; sourceTree = "<group>"; };
+		AC5BA48C287CB8B7002EE4D1 /* RatingCommentModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingCommentModel.swift; sourceTree = "<group>"; };
+		AC5BA48E287CB8CF002EE4D1 /* RatingCommentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingCommentView.swift; sourceTree = "<group>"; };
+		AC5BA490287CE9FB002EE4D1 /* NewOrgView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewOrgView.swift; sourceTree = "<group>"; };
 		AC5C542B255052E5008D66B0 /* BlindTiger.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BlindTiger.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC5C542E255052E5008D66B0 /* BlindTigerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlindTigerApp.swift; sourceTree = "<group>"; };
 		AC5C5432255052E7008D66B0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -227,6 +241,11 @@
 			isa = PBXGroup;
 			children = (
 				AC0D1F0B285968B2005AE4BB /* RatingsView.swift */,
+				AC5BA29D28762F6D00EF66C5 /* RatingCards.swift */,
+				AC5BA48A287C7F94002EE4D1 /* RatingsModel.swift */,
+				AC5BA48C287CB8B7002EE4D1 /* RatingCommentModel.swift */,
+				AC5BA48E287CB8CF002EE4D1 /* RatingCommentView.swift */,
+				AC5BA490287CE9FB002EE4D1 /* NewOrgView.swift */,
 			);
 			path = Ratings;
 			sourceTree = "<group>";
@@ -253,10 +272,12 @@
 		AC0D1F14285968B2005AE4BB /* Bulletin */ = {
 			isa = PBXGroup;
 			children = (
+				AC1A5C462866487000979DE4 /* PromoCardView.swift */,
 				AC0D1F15285968B2005AE4BB /* BulletinView.swift */,
 				AC1A5C482866514F00979DE4 /* BulletinModel.swift */,
-				AC1A5C462866487000979DE4 /* PromoCardView.swift */,
 				AC1A5C4A28666D4200979DE4 /* NewPromoView.swift */,
+				AC5BA29928750E6E00EF66C5 /* BulletinCommentView.swift */,
+				AC5BA29B28750EF500EF66C5 /* BulletinCommentModel.swift */,
 			);
 			path = Bulletin;
 			sourceTree = "<group>";
@@ -386,6 +407,7 @@
 		ACC50988286376C40037F540 /* PeekComments */ = {
 			isa = PBXGroup;
 			children = (
+				ACC5098D2863782C0037F540 /* PeekSchoolComments.swift */,
 			);
 			path = PeekComments;
 			sourceTree = "<group>";
@@ -395,7 +417,6 @@
 			children = (
 				ACEE294D2862197700AD9B89 /* PeekSchoolView.swift */,
 				ACEE2950286234EE00AD9B89 /* PeekSchoolModel.swift */,
-				ACC5098D2863782C0037F540 /* PeekSchoolComments.swift */,
 			);
 			path = PeekSchoolView;
 			sourceTree = "<group>";
@@ -700,6 +721,7 @@
 				ACEE2CE3255D539B00C6CE6C /* WelcomeViewModel.swift in Sources */,
 				ACEE294E2862197700AD9B89 /* PeekSchoolView.swift in Sources */,
 				AC7D3539259413B2009C5573 /* TextFieldExtension.swift in Sources */,
+				AC5BA29C28750EF500EF66C5 /* BulletinCommentModel.swift in Sources */,
 				AC0D1F20285968B2005AE4BB /* BulletinView.swift in Sources */,
 				AC0D1F19285968B2005AE4BB /* RatingsView.swift in Sources */,
 				AC0D1F1F285968B2005AE4BB /* PeekHomeView.swift in Sources */,
@@ -709,10 +731,13 @@
 				AC1C06E8256FF33E009A4694 /* KeyboardExtensions.swift in Sources */,
 				AC1C070425747F92009A4694 /* ProfileViewModel.swift in Sources */,
 				ACEE2951286234EE00AD9B89 /* PeekSchoolModel.swift in Sources */,
+				AC5BA48D287CB8B7002EE4D1 /* RatingCommentModel.swift in Sources */,
 				AC0D1F1D285968B2005AE4BB /* SelfProfileView.swift in Sources */,
 				ACC5098E2863782C0037F540 /* PeekSchoolComments.swift in Sources */,
+				AC5BA29E28762F6D00EF66C5 /* RatingCards.swift in Sources */,
 				AC2C1C3A25651C2900C30014 /* Colors.swift in Sources */,
 				ACE0C35B2561AEFD0051C61D /* NotificationView.swift in Sources */,
+				AC5BA29A28750E6E00EF66C5 /* BulletinCommentView.swift in Sources */,
 				AC2C1C3F25651DD600C30014 /* NewPostViewModel.swift in Sources */,
 				AC1C06FF2572EB7C009A4694 /* PeakViewModel.swift in Sources */,
 				ACE0C3562561AEEE0051C61D /* SearchView.swift in Sources */,
@@ -723,15 +748,18 @@
 				ACF3C896256ACB310045AB20 /* CommentViewModel.swift in Sources */,
 				AC5C54A825506C44008D66B0 /* PreLoginView.swift in Sources */,
 				AC0D1F16285968B2005AE4BB /* HomeView.swift in Sources */,
+				AC5BA48B287C7F94002EE4D1 /* RatingsModel.swift in Sources */,
 				ACEE295328627BFA00AD9B89 /* CommentModel.swift in Sources */,
 				AC1A5C492866514F00979DE4 /* BulletinModel.swift in Sources */,
 				AC928CFD257E87E4008B4871 /* NotificationViewModel.swift in Sources */,
 				AC5C542F255052E5008D66B0 /* BlindTigerApp.swift in Sources */,
 				ACB7C36425A2235200CB6320 /* UploadImage.swift in Sources */,
 				AC0D1F1A285968B2005AE4BB /* TabBarView.swift in Sources */,
+				AC5BA491287CE9FB002EE4D1 /* NewOrgView.swift in Sources */,
 				ACE0C3492561A4CF0051C61D /* TabBar.swift in Sources */,
 				AC1C06DE256D90A2009A4694 /* DateExtension.swift in Sources */,
 				AC1C06E3256D90B3009A4694 /* navbarColorExtension.swift in Sources */,
+				AC5BA48F287CB8CF002EE4D1 /* RatingCommentView.swift in Sources */,
 				ACB7C35F25A2177600CB6320 /* ImagePicker.swift in Sources */,
 				AC1A5C4B28666D4200979DE4 /* NewPromoView.swift in Sources */,
 				AC5C54DF255198B2008D66B0 /* Home.swift in Sources */,
@@ -907,7 +935,7 @@
 				DEVELOPMENT_TEAM = RSCT893G95;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = BlindTiger/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -934,7 +962,7 @@
 				DEVELOPMENT_TEAM = RSCT893G95;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = BlindTiger/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

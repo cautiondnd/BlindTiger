@@ -122,5 +122,5 @@ var currentSchool = email?.dropLast(4).drop(while: { (Character) -> Bool in
 
 
 //let cleanSchool = String(currentSchool ?? "")
-let cleanSchool = "vanderbilt"
+var cleanSchool = "vanderbilt"
 

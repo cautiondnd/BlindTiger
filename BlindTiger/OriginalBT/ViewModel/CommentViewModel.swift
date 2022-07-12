@@ -16,8 +16,8 @@
 //    @Published var isAnonymous = true
 //    @Published var initialLoading = true
 //    @Published var uploadingComment = false
-//    
-//    
+//
+//
 //    //var id: String
 //    // for some reason this gets called twice when done from navigation but only once from tabbar. thats why it doesnt work (idk a fix)
 //    let db = Firestore.firestore()
@@ -32,7 +32,7 @@
 //            // map data to a post struct
 //            self.comments = documents.map { (queryDocumentSnapshot) -> comment in
 //                let data = queryDocumentSnapshot.data()
-//                
+//
 //                let content = data["content"] as? String ?? ""
 //                let authoruid = data["authoruid"] as? String ?? ""
 //                let time = data["time"] as! Timestamp
@@ -42,22 +42,22 @@
 //                let postid = data["postid"] as? String ?? ""
 //                let autherusername = data["authorusername"] as? String ?? ""
 //                let reports = data["reports"] as? Int ?? 0
-//                
+//
 //                if reports >= 5 {
 //                    self.db.collection("BlindTiger").document(selectedSchool).collection("posts").document(postid).collection("comments").document(commentid).delete()
 //                }
-//                
+//
 //                return comment(id: commentid, postid: postid, content: content, votes: votes, time: time, authoruid: authoruid, anonymous: anonymous, authorusername: autherusername, reports: reports)
-//                
+//
 //            }
 //            self.initialLoading = false
 //        }
-//        
-//      
-//        
+//
+//
+//
 //    }
-//    
-//    
+//
+//
 //    func newComment(id: String) {
 //       //TODO: make it so that you can only press the button once every 2 seconds
 //        //make sure something is written and its less than 240 charecters
@@ -67,16 +67,16 @@
 //        else {
 //            uploadingComment = true
 //            let uid = Auth.auth().currentUser!.uid
-//            
-//            
+//
+//
 //            db.collection("BlindTiger").document(cleanSchool).collection("users").document(uid).getDocument { [self] (document, error) in
 //                //if user exists and has a username go onto making the post
 //                if let document = document, document.exists {
-//                    
+//
 //                    let authorusername = document.get("username") as! String
-//                    
-//                    
-//                    
+//
+//
+//
 //                    //create new post and pass in data
 //                    // make anonymous button
 //                    let userPost = db.collection("BlindTiger").document(cleanSchool).collection("posts").document(id).collection("comments").addDocument(data: ["content" : newCommentContent.trimmingCharacters(in: .whitespacesAndNewlines), "authoruid" : uid, "votes" : 0, "anonymous" : isAnonymous, "reports" : 0, "time" : Date(), "authorusername" : authorusername, "postid" : id]) { (err) in
@@ -88,27 +88,27 @@
 //                        else{
 //                            newCommentContent = ""
 //                            UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
-//                            
+//
 //                        }
-//                        
+//
 //                    }
 //                    //add document id as a field
 //                    let userPostID = userPost.documentID
 //                    db.collection("BlindTiger").document(cleanSchool).collection("posts").document(id).collection("comments").document(userPostID).setData(["commentid" : userPostID], merge: true)
-//                    
-//                    
-//                    
-//                    
+//
+//
+//
+//
 //                }
-//               
+//
 //            }
 //            DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(1)){
 //                self.uploadingComment = false}
 //        }
-//    
+//
 //    }
-//    
-//    
+//
+//
 //}
 //
 //
@@ -133,14 +133,14 @@
 //    @State var showDeleteAlert = false
 //    @State var showBlockAlert = false
 //    @Binding var blockedUsers: [String]
-//    
+//
 //    var body: some View {
-//        
+//
 //        let date = time.dateValue()
-//        
-//        
-//        
-//        
+//
+//
+//
+//
 //        ZStack{
 //            VStack{
 //                HStack{
@@ -153,14 +153,14 @@
 //                        label: {Text("\(authorusername.trimmingCharacters(in: .whitespacesAndNewlines)) ").lineLimit(1)})
 //                        NavigationLink(destination: NotSelfProfileView(userID: authoruid, cameFromSecondaryView: true, blockedUsers: $blockedUsers), isActive: $goProfile) {
 //                            EmptyView()}
-//                        
+//
 //                    }
 //                    Text("◦ \(date.timeAgoDisplay())").foregroundColor(.gray).layoutPriority(0.9)
 //                    Spacer()
 //                    Button(action: {showReportPopUp = true}, label: {
 //                            Image(systemName: "ellipsis").offset(y: -10).foregroundColor(.gray).padding(7)})
-//                    
-//                    
+//
+//
 //                }.padding(.bottom, 5.0)
 //                HStack{
 //                    Text(content).fixedSize(horizontal: false, vertical: true).layoutPriority(1).font(.title3).padding(.trailing, 1)
@@ -192,11 +192,11 @@
 //                                .foregroundColor(upvote == true ? .orange : .gray)
 //                                .font(.title).padding([.top, .bottom, .trailing], 5.0)
 //                        })
-//                        
+//
 //                        Text("\(votes)").font(.title).padding(.trailing, 5.0).lineLimit(1).allowsTightening(true)
 //                        Button(action: {
-//                            
-//                            
+//
+//
 //                            downvote.toggle();
 //                            UserDefaults.standard.set(self.downvote, forKey: "\(commentid)downvoted");
 //                            UserDefaults.standard.set(false, forKey: "\(commentid)upvoted")
@@ -221,39 +221,39 @@
 //                                .foregroundColor(downvote == true ? .orange : .gray)
 //                                .font(.title).padding([.top, .bottom, .trailing], 5.0)
 //                        })
-//                        
-//                        
-//                        
+//
+//
+//
 //                    }
 //                }
-//                
+//
 //            }
 //            .padding()
 //            .background(RoundedRectangle(cornerRadius: 10).foregroundColor(.white).shadow(color: Color.black.opacity(0.15), radius: 6)).padding(.horizontal).padding(.vertical, 5)
-//            
+//
 //            if showReportPopUp == true {
-//                
+//
 //                if authoruid == Auth.auth().currentUser?.uid {
 //                    ZStack {
 //                        Color.white
 //                        VStack(spacing: 0) {
-//                            
+//
 //                            Button(action: {
 //                                showDeleteAlert = true
-//                                
+//
 //                            }, label: {
-//                                
+//
 //                                Text("Delete").foregroundColor(.red).fontWeight(.semibold)
 //                                    .frame(width: 300.0, height: 75)
 //                                    .padding(.horizontal)
 //                            })
-//                            
-//                            
-//                            
-//                            
-//                            
-//                            
-//                            
+//
+//
+//
+//
+//
+//
+//
 //                            ZStack{
 //                                Button(action: {
 //                                    showReportPopUp = false
@@ -262,8 +262,8 @@
 //                                })
 //                                Rectangle().foregroundColor(.gray).frame(height: 1).offset(y: -25).opacity(0.5)
 //                            }
-//                            
-//                            
+//
+//
 //                        }
 //                    }.alert(isPresented: $showDeleteAlert, content: {
 //                                Alert(title: Text("Delete Post?"), message: Text("There is no way to recover a post once deleted."), primaryButton: .default(Text("Cancel")) {showReportPopUp = false}, secondaryButton: .destructive(Text("Delete")) {db.collection("BlindTiger").document(cleanSchool).collection("posts").document(postid).collection("comments").document(commentid).delete()} )})
@@ -275,15 +275,15 @@
 //                    ZStack {
 //                        Color.white
 //                        VStack(spacing: 0) {
-//                            
-//                            
+//
+//
 //                            Button(action: {reported.toggle();
 //                                UserDefaults.standard.set(reported, forKey: "\(commentid)reported");
 //                                if reported == true {db.collection("BlindTiger").document(cleanSchool).collection("posts").document(postid).collection("comments").document(commentid).updateData(["reports" : FieldValue.increment(Int64(1))])}
 //                                else {
 //                                    db.collection("BlindTiger").document(cleanSchool).collection("posts").document(postid).collection("comments").document(commentid).updateData(["reports" : FieldValue.increment(Int64(-1))])
 //                                }
-//                                
+//
 //                            }, label: {
 //                                HStack{
 //                                    Text("Report").foregroundColor(.red).fontWeight(.semibold)
@@ -294,37 +294,37 @@
 //                                    else{
 //                                        Image(systemName: "square").foregroundColor(.red).font(.title2)
 //                                    }
-//                                    
+//
 //                                }.padding(.horizontal)
 //                                .frame(width: 300.0, height: 50)
 //                            })
-//                            
-//                            
+//
+//
 //                            Button(action: {
 ////
 //                                showBlockAlert = true
-//                               
+//
 //                            }, label: {
 //                                HStack{
 //
 //                                        Text("Block User").foregroundColor(.black).padding(.horizontal)//}
-//                    
+//
 //                                    Spacer()
 //                                }
 //                            }).frame(width: 300.0, height: 50)
-//                            
+//
 //                            ZStack{
 //                                Button(action: {
 //                                    showReportPopUp = false
 //                                }, label: {
-//                                    
+//
 //                                    Text("Close").foregroundColor(.blue).frame(width: 300.0, height: 50)
-//                                    
+//
 //                                })
 //                                Rectangle().foregroundColor(.gray).frame(height: 1).offset(y: -25).opacity(0.5)
 //                            }
-//                            
-//                            
+//
+//
 //                        }
 //                    }.alert(isPresented: $showBlockAlert, content: {
 //                                Alert(title: Text("Block User?"), message: Text("Are you sure you want to block this user?"), primaryButton: .default(Text("Cancel")) {showReportPopUp = false}, secondaryButton: .destructive(Text("Block")) {blockedUsers.append(authoruid)
@@ -335,13 +335,13 @@
 //                }
 //            }
 //        }
-//        
-//        
+//
+//
 //        .onDisappear(){
 //            upvote = UserDefaults.standard.bool(forKey: "\(commentid)upvoted");
 //            downvote = UserDefaults.standard.bool(forKey: "\(commentid)downvoted");
 //            reported = UserDefaults.standard.bool(forKey: "\(commentid)reported");
-//            
+//
 //        }
 //    }
 //}
@@ -372,15 +372,15 @@
 //    @State var selectedTab = 0
 //    @State var goProfile = false
 //    @Binding var blockedUsers: [String]
-//    
+//
 //    //    var reports: Double
 //    //    @State var reported: Bool
 //    //    @State var showReportPopUp = false
 //    //    @State var showDeleteAlert = false
-//    
+//
 //    var body: some View {
 //        let date = time.dateValue()
-//        
+//
 //        ZStack{
 //            VStack{
 //                HStack{
@@ -394,25 +394,25 @@
 //                        NavigationLink(destination: NotSelfProfileView(userID: authoruid, cameFromSecondaryView: true, blockedUsers: $blockedUsers), isActive: $goProfile) {
 //                            EmptyView()}
 //                    }
-//                    
-//                    
+//
+//
 //                    Text("◦ \(date.timeAgoDisplay())").foregroundColor(.gray).layoutPriority(0.9)
 //                    Spacer()
 //                    //                    Button(action: {showReportPopUp.toggle()}, label: {
 //                    //                        Image(systemName: "ellipsis").padding([.leading]).foregroundColor(.gray)//.offset(y: -10)
 //                    //
 //                    //                    })
-//                    
+//
 //                }.padding(.bottom, 5.0)
 //                HStack{
 //                    Text(content).fixedSize(horizontal: false, vertical: true).layoutPriority(1).font(.title3).padding(.vertical).padding(.trailing, 1)
 //                    Spacer()
-//                    
+//
 //                }
 //            }
 //            .padding()
 //            .background(RoundedRectangle(cornerRadius: 10).foregroundColor(.white)).padding(.horizontal).padding(.vertical, 5)
-//            
+//
 //            // to add reports to card commented on
 //            //            if showReportPopUp == true {
 //            //
