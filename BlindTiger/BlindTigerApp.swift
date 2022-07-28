@@ -19,6 +19,7 @@ struct BlindTigerApp: App {
     
     var body: some Scene {
         WindowGroup {
+            
             TabBarView(info: AppDelegate(), selectedTab: 0)
 //            let hasSignedIn = UserDefaults.standard.bool(forKey: "hasSignedIn")
 //
