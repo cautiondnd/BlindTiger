@@ -20,13 +20,13 @@ struct BlindTigerApp: App {
     var body: some Scene {
         WindowGroup {
             
-            TabBarView(info: AppDelegate(), selectedTab: 0)
+           // TabBarView(selectedTab: 0)
 //            let hasSignedIn = UserDefaults.standard.bool(forKey: "hasSignedIn")
 //
 //
 //               if hasSignedIn == false {
 //
-//            SignInView()
+            SignInView(info: AppDelegate())
 //            }
 //                        else{
 //                            TabBarView(selectedTab: 0)
@@ -42,12 +42,9 @@ struct BlindTigerApp: App {
 //initialize firebase
 class AppDelegate: NSObject, UIApplicationDelegate, GIDSignInDelegate, ObservableObject {
     
-    
-    @Published var hasNotSignedIn = true
-    @Published var showAlert = false
+    @Published var goSelectSchool = true
+    @Published var goHome = false
 
-    
-    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
         //initialize firebase
         FirebaseApp.configure()
@@ -67,61 +64,84 @@ class AppDelegate: NSObject, UIApplicationDelegate, GIDSignInDelegate, Observabl
         //signing into firebase
         Auth.auth().signIn(with: credential) { (result, err) in
             
-            if err != nil {
-                print((err?.localizedDescription)!)
-                return
-            }
-            else{
-                let uid = Auth.auth().currentUser?.uid
-                
-                if (Auth.auth().currentUser?.email?.hasSuffix(".edu"))! || Auth.auth().currentUser?.email == "blindtigertesting@gmail.com"{
-                 
-                    db.collection("BlindTiger").document(cleanSchool).collection("users").document(uid!).setData([
-                        
-                        "username": Auth.auth().currentUser?.displayName ?? "",
-                        "uid": uid ?? "",
-                        "email": Auth.auth().currentUser?.email ?? "",
-                        "dateCreated": Date(),
-                        
-                    ]) { err in
-                        if err != nil {}
-                        else {self.hasNotSignedIn = false; print("acc created")}
-                    }
-                }
-                else {
-                    self.showAlert = true; print("alert showing")
-                }
-                
-            }
+            if err != nil {print("couldnt signin"); return}
+            
+            self.validateSignIn()
+            print(self.goHome)
+//            else{
+//                let uid = Auth.auth().currentUser?.uid
+//
+//                if (Auth.auth().currentUser?.email?.hasSuffix(".edu"))! || Auth.auth().currentUser?.email == "blindtigertesting@gmail.com"{
+//
+//                    db.collection("BlindTiger").document(cleanSchool).collection("users").document(uid!).setData([
+//
+//                        "username": Auth.auth().currentUser?.displayName ?? "",
+//                        "uid": uid ?? "",
+//                        "email": Auth.auth().currentUser?.email ?? "",
+//                        "dateCreated": Date(),
+//
+//                    ]) { err in
+//                        if err != nil {}
+//                        else {self.goHome = true; print(self.goHome)}
+//                    }
+//                }
+//                else {
+//                    print("alert showing")
+//                }
+//
+//            }
         }
+        validateSignIn()
         
     }
     func sign(_ signIn: GIDSignIn!, didDisconnectWith user: GIDGoogleUser!, withError error: Error!) {
         print(error.localizedDescription)
     }
     
+    func validateSignIn() {
+        print("funcran")
+        let seperatedEmail = Auth.auth().currentUser?.email?.components(separatedBy: "@").last!.components(separatedBy: ".")
+        let school = seperatedEmail![seperatedEmail!.count -  2]
+        let uid = Auth.auth().currentUser?.uid
+        
+        if (Auth.auth().currentUser?.email?.hasSuffix(".edu"))! {
+            db.collection("BlindTiger").document(school).collection("users").document(uid!).setData([
+                "username": Auth.auth().currentUser?.displayName ?? "",
+                "uid": uid ?? "",
+                "email": Auth.auth().currentUser?.email ?? "",
+                "dateCreated": Date()
+            ], merge: true)
+            goHome = true
+        }
+        else {
+            goSelectSchool = true
+        }
+        
+        
+    }
     
 }
 
 
 let db = Firestore.firestore()
 //drop everything up to @
-let email = Auth.auth().currentUser?.email?.drop(while: { (Character) -> Bool in
-    return Character != "@"
-})
-
-var currentSchool = email?.dropLast(4).drop(while: { (Character) -> Bool in
-    if (email?.filter({ $0 == "." }).count)! > 1 {
-        //if theres multiple . then delete everything up to the first one
-        return Character != "."
-    }
-    else{
-        //if not then delete everything up to the @
-        return Character != "@"
-    }
-}).dropFirst(1)
-
-
-//let cleanSchool = String(currentSchool ?? "")
-var cleanSchool = "vanderbilt"
+//let email = Auth.auth().currentUser?.email?.drop(while: { (Character) -> Bool in
+//    return Character != "@"
+//})
+//
+//var currentSchool = email?.dropLast(4).drop(while: { (Character) -> Bool in
+//    if (email?.filter({ $0 == "." }).count)! > 1 {
+//        //if theres multiple . then delete everything up to the first one
+//        return Character != "."
+//    }
+//    else{
+//        //if not then delete everything up to the @
+//        return Character != "@"
+//    }
+//}).dropFirst(1)
+//
+let seperatedEmail = Auth.auth().currentUser?.email?.components(separatedBy: "@").last!.components(separatedBy: ".")
+let userSchool = seperatedEmail?[(seperatedEmail?.count ?? 0) -  2] ?? ""
+var cleanSchool = UserDefaults.standard.string(forKey: "cleanSchool") ?? userSchool
+//var cleanSchool = "vanderbilt"
 
