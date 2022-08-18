@@ -19,14 +19,23 @@ struct BlindTigerApp: App {
     
     var body: some Scene {
         WindowGroup {
+          
+            let hasSignedIn = UserDefaults.standard.bool(forKey: "hasSignedIn")
+            if hasSignedIn == true {
+                TabBarView(selectedTab: 0)
+            }
+            else {
+                FirstOpenTabBar(selectedTab: 0, info: self.delegate)
+            }
+            //SchoolSelection(info: self.delegate)
             
-           // TabBarView(selectedTab: 0)
-//            let hasSignedIn = UserDefaults.standard.bool(forKey: "hasSignedIn")
 //
 //
 //               if hasSignedIn == false {
 //
-            SignInView(info: AppDelegate())
+  //          SchoolSelection()
+            
+        //  SignInView(info: self.delegate)
 //            }
 //                        else{
 //                            TabBarView(selectedTab: 0)
@@ -42,7 +51,8 @@ struct BlindTigerApp: App {
 //initialize firebase
 class AppDelegate: NSObject, UIApplicationDelegate, GIDSignInDelegate, ObservableObject {
     
-    @Published var goSelectSchool = true
+    @Published var showSheet = true
+    @Published var goSchoolSelect = false
     @Published var goHome = false
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
@@ -65,38 +75,15 @@ class AppDelegate: NSObject, UIApplicationDelegate, GIDSignInDelegate, Observabl
         Auth.auth().signIn(with: credential) { (result, err) in
             
             if err != nil {print("couldnt signin"); return}
-            
             self.validateSignIn()
-            print(self.goHome)
-//            else{
-//                let uid = Auth.auth().currentUser?.uid
-//
-//                if (Auth.auth().currentUser?.email?.hasSuffix(".edu"))! || Auth.auth().currentUser?.email == "blindtigertesting@gmail.com"{
-//
-//                    db.collection("BlindTiger").document(cleanSchool).collection("users").document(uid!).setData([
-//
-//                        "username": Auth.auth().currentUser?.displayName ?? "",
-//                        "uid": uid ?? "",
-//                        "email": Auth.auth().currentUser?.email ?? "",
-//                        "dateCreated": Date(),
-//
-//                    ]) { err in
-//                        if err != nil {}
-//                        else {self.goHome = true; print(self.goHome)}
-//                    }
-//                }
-//                else {
-//                    print("alert showing")
-//                }
-//
-//            }
         }
-        validateSignIn()
         
     }
     func sign(_ signIn: GIDSignIn!, didDisconnectWith user: GIDGoogleUser!, withError error: Error!) {
         print(error.localizedDescription)
     }
+    
+
     
     func validateSignIn() {
         print("funcran")
@@ -109,15 +96,85 @@ class AppDelegate: NSObject, UIApplicationDelegate, GIDSignInDelegate, Observabl
                 "username": Auth.auth().currentUser?.displayName ?? "",
                 "uid": uid ?? "",
                 "email": Auth.auth().currentUser?.email ?? "",
-                "dateCreated": Date()
+                "dateCreated": Date(),
+                "cleanSchool": school
             ], merge: true)
-            goHome = true
+            showSheet = false
+            cleanSchool = school
+            UserDefaults.standard.set(cleanSchool, forKey: "cleanSchool")
+            UserDefaults.standard.set(true, forKey: "hasSignedIn")
         }
         else {
-            goSelectSchool = true
+            db.collectionGroup("users").whereField("uid", isEqualTo: Auth.auth().currentUser!.uid).order(by: "cleanSchool", descending: false).getDocuments { querySnap, err in
+                if (((querySnap?.documents.last?.exists)) != nil) {
+                    print(querySnap?.documents.last?.data()["cleanSchool"] as? String ?? "gmail")
+                    cleanSchool = (querySnap?.documents.last?.data()["cleanSchool"] as? String ?? "gmail")
+                    self.showSheet = false
+                    UserDefaults.standard.set(true, forKey: "hasSignedIn")
+                }
+                else {
+                    self.goSchoolSelect = true
+                }
+            }
+        }
+    }
+    
+    func createUserSchoolSelect(selectedSchool: String) {
+        cleanSchool = selectedSchool;
+        UserDefaults.standard.set(selectedSchool, forKey: "cleanSchool")
+        db.collection("BlindTiger").document(cleanSchool).collection("users").document(Auth.auth().currentUser!.uid).setData([
+            "username": Auth.auth().currentUser?.displayName ?? "",
+            "uid": Auth.auth().currentUser?.uid ?? "",
+            "email": Auth.auth().currentUser?.email ?? "",
+            "dateCreated": Date(),
+            "cleanSchool": selectedSchool])
+        UserDefaults.standard.set(true, forKey: "hasSignedIn")
+        showSheet = false
+    }
+    
+    @Published var allSchools = [School]()
+    @Published var featuredSchools = [School]()
+    @Published var initialLoading = true
+    
+    func fetchSchools() {
+        
+        
+        db.collection("BlindTiger").whereField("featured", isEqualTo: true).getDocuments { (query, err) in
+            
+            guard let documents = query?.documents else{return}
+                    
+            self.featuredSchools = documents.map { (queryDocumentSnapshot) -> School in
+                let data = queryDocumentSnapshot.data()
+
+                let id = queryDocumentSnapshot.documentID
+                let name = data["name"] as? String ?? ""
+                let featured = data["featured"] as? Bool ?? false
+                let showing = data["showing"] as? Bool ?? false
+                
+
+                return School(id: id, name: name.capitalized, featured: featured, showing: showing)
+
+            }
         }
         
-        
+        db.collection("BlindTiger").order(by: "name").getDocuments { (query, err) in
+            
+            guard let documents = query?.documents else{return}
+                    
+            self.allSchools = documents.map { (queryDocumentSnapshot) -> School in
+                let data = queryDocumentSnapshot.data()
+
+                let id = queryDocumentSnapshot.documentID
+                let name = data["name"] as? String ?? ""
+                let featured = data["featured"] as? Bool ?? false
+                let showing = data["showing"] as? Bool ?? false
+                
+
+                return School(id: id, name: name.capitalized, featured: featured, showing: showing)
+
+            }
+            self.initialLoading = false
+        }
     }
     
 }
@@ -141,7 +198,7 @@ let db = Firestore.firestore()
 //}).dropFirst(1)
 //
 let seperatedEmail = Auth.auth().currentUser?.email?.components(separatedBy: "@").last!.components(separatedBy: ".")
-let userSchool = seperatedEmail?[(seperatedEmail?.count ?? 0) -  2] ?? ""
+let userSchool = seperatedEmail?[(seperatedEmail?.count ?? 0) -  2] ?? "gmail"
 var cleanSchool = UserDefaults.standard.string(forKey: "cleanSchool") ?? userSchool
 //var cleanSchool = "vanderbilt"
 

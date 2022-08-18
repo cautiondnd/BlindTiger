@@ -185,11 +185,11 @@
 //
 //
 //struct adView : UIViewRepresentable {
-//    
-//    
+//
+//
 //    func makeUIView(context: UIViewRepresentableContext<adView>) -> GADBannerView {
 //        let banner = GADBannerView(adSize: kGADAdSizeBanner)
-//        
+//
 //        banner.adUnitID = "ca-app-pub-5704345460704356/2000662981"
 //        // REAL ADS: ca-app-pub-5704345460704356/2000662981
 //        // FAKE ADS: ca-app-pub-3940256099942544/2934735716
@@ -198,7 +198,7 @@
 //        return banner
 //    }
 //    func updateUIView(_ uiView: GADBannerView, context: UIViewRepresentableContext<adView>) {
-//        
+//
 //    }
 //}
-//
+
