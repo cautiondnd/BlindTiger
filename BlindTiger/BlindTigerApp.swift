@@ -25,7 +25,8 @@ struct BlindTigerApp: App {
                 TabBarView(selectedTab: 0)
             }
             else {
-                FirstOpenTabBar(selectedTab: 0, info: self.delegate)
+              //  SchoolSelection(info: self.delegate)
+                SignInView(info: self.delegate)
             }
             //SchoolSelection(info: self.delegate)
             
@@ -100,6 +101,7 @@ class AppDelegate: NSObject, UIApplicationDelegate, GIDSignInDelegate, Observabl
                 "cleanSchool": school
             ], merge: true)
             showSheet = false
+            goHome = true
             cleanSchool = school
             UserDefaults.standard.set(cleanSchool, forKey: "cleanSchool")
             UserDefaults.standard.set(true, forKey: "hasSignedIn")
@@ -110,6 +112,7 @@ class AppDelegate: NSObject, UIApplicationDelegate, GIDSignInDelegate, Observabl
                     print(querySnap?.documents.last?.data()["cleanSchool"] as? String ?? "gmail")
                     cleanSchool = (querySnap?.documents.last?.data()["cleanSchool"] as? String ?? "gmail")
                     self.showSheet = false
+                    self.goHome = true
                     UserDefaults.standard.set(true, forKey: "hasSignedIn")
                 }
                 else {
@@ -130,6 +133,7 @@ class AppDelegate: NSObject, UIApplicationDelegate, GIDSignInDelegate, Observabl
             "cleanSchool": selectedSchool])
         UserDefaults.standard.set(true, forKey: "hasSignedIn")
         showSheet = false
+        goHome = true
     }
     
     @Published var allSchools = [School]()

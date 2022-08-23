@@ -10,9 +10,9 @@
 //
 //struct CommentView: View {
 //
-//    @State var textHeight: CGFloat = 0
 //    @State var cameFromSecondaryView = false
 //
+//    @State var textHeight: CGFloat = 0
 //    var textFieldHeight: CGFloat {
 //        let minHeight: CGFloat = 30
 //        let maxHeight: CGFloat = 70
