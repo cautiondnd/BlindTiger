@@ -113,6 +113,7 @@ class AppDelegate: NSObject, UIApplicationDelegate, GIDSignInDelegate, Observabl
                     cleanSchool = (querySnap?.documents.last?.data()["cleanSchool"] as? String ?? "gmail")
                     self.showSheet = false
                     self.goHome = true
+                    UserDefaults.standard.set(cleanSchool, forKey: "cleanSchool")
                     UserDefaults.standard.set(true, forKey: "hasSignedIn")
                 }
                 else {

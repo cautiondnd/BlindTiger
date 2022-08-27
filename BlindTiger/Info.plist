@@ -54,7 +54,7 @@
 		<key>UIColorName</key>
 		<string>customOrange</string>
 		<key>UIImageName</key>
-		<string>tiger.medium</string>
+		<string>launchScreen</string>
 	</dict>
 	<key>UIRequiredDeviceCapabilities</key>
 	<array>
