@@ -64,6 +64,7 @@
 		ACB7C35F25A2177600CB6320 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB7C35E25A2177600CB6320 /* ImagePicker.swift */; };
 		ACB7C36425A2235200CB6320 /* UploadImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB7C36325A2235200CB6320 /* UploadImage.swift */; };
 		ACC5098E2863782C0037F540 /* PeekSchoolComments.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACC5098D2863782C0037F540 /* PeekSchoolComments.swift */; };
+		ACDD68A528BED3AD00D66451 /* GodModeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACDD68A428BED3AD00D66451 /* GodModeView.swift */; };
 		ACE0C3492561A4CF0051C61D /* TabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACE0C3482561A4CF0051C61D /* TabBar.swift */; };
 		ACE0C3562561AEEE0051C61D /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACE0C3552561AEEE0051C61D /* SearchView.swift */; };
 		ACE0C35B2561AEFD0051C61D /* NotificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACE0C35A2561AEFD0051C61D /* NotificationView.swift */; };
@@ -166,6 +167,7 @@
 		ACB87CAE28BBCA8200995DFC /* FirebaseAuth.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = FirebaseAuth.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		ACC5098D2863782C0037F540 /* PeekSchoolComments.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeekSchoolComments.swift; sourceTree = "<group>"; };
 		ACD5571428BBF207007E43A0 /* BlindTiger.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = BlindTiger.entitlements; sourceTree = "<group>"; };
+		ACDD68A428BED3AD00D66451 /* GodModeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GodModeView.swift; sourceTree = "<group>"; };
 		ACE0C3482561A4CF0051C61D /* TabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBar.swift; sourceTree = "<group>"; };
 		ACE0C3552561AEEE0051C61D /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
 		ACE0C35A2561AEFD0051C61D /* NotificationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationView.swift; sourceTree = "<group>"; };
@@ -223,13 +225,14 @@
 		AC0D1F05285968B2005AE4BB /* IOS16redesign */ = {
 			isa = PBXGroup;
 			children = (
+				AC0D1F0C285968B2005AE4BB /* TabBarView.swift */,
 				AC216E4328951D3F0057823E /* SignUp */,
 				AC0D1F06285968B2005AE4BB /* Home */,
 				AC0D1F12285968B2005AE4BB /* Peek */,
 				AC0D1F14285968B2005AE4BB /* Bulletin */,
 				AC0D1F0A285968B2005AE4BB /* Ratings */,
 				AC0D1F0F285968B2005AE4BB /* Profile */,
-				AC0D1F0C285968B2005AE4BB /* TabBarView.swift */,
+				ACDD68A028BED11A00D66451 /* GodModeStats */,
 			);
 			name = IOS16redesign;
 			path = ../../IOS16redesign;
@@ -332,7 +335,6 @@
 			children = (
 				ACD5571428BBF207007E43A0 /* BlindTiger.entitlements */,
 				AC0D1F05285968B2005AE4BB /* IOS16redesign */,
-				ACAFFCAD28596158004B0BA6 /* OriginalBT */,
 				AC5C542E255052E5008D66B0 /* BlindTigerApp.swift */,
 				ACB7C35025A0E58000CB6320 /* GoogleService-Info.plist */,
 				AC5C5432255052E7008D66B0 /* Assets.xcassets */,
@@ -341,6 +343,7 @@
 				AC1C06DD256D90A2009A4694 /* DateExtension.swift */,
 				AC2C1C3925651C2900C30014 /* Colors.swift */,
 				AC5C5437255052E7008D66B0 /* Info.plist */,
+				ACAFFCAD28596158004B0BA6 /* OriginalBT */,
 				AC5C5434255052E7008D66B0 /* Preview Content */,
 			);
 			path = BlindTiger;
@@ -435,6 +438,14 @@
 				ACC5098D2863782C0037F540 /* PeekSchoolComments.swift */,
 			);
 			path = PeekComments;
+			sourceTree = "<group>";
+		};
+		ACDD68A028BED11A00D66451 /* GodModeStats */ = {
+			isa = PBXGroup;
+			children = (
+				ACDD68A428BED3AD00D66451 /* GodModeView.swift */,
+			);
+			path = GodModeStats;
 			sourceTree = "<group>";
 		};
 		ACEE294F2862347C00AD9B89 /* PeekSchoolView */ = {
@@ -745,6 +756,7 @@
 				ACEE2CE3255D539B00C6CE6C /* WelcomeViewModel.swift in Sources */,
 				ACEE294E2862197700AD9B89 /* PeekSchoolView.swift in Sources */,
 				AC7D3539259413B2009C5573 /* TextFieldExtension.swift in Sources */,
+				ACDD68A528BED3AD00D66451 /* GodModeView.swift in Sources */,
 				AC5BA29C28750EF500EF66C5 /* BulletinCommentModel.swift in Sources */,
 				AC0D1F20285968B2005AE4BB /* BulletinView.swift in Sources */,
 				AC0D1F19285968B2005AE4BB /* RatingsView.swift in Sources */,
@@ -960,7 +972,7 @@
 				CODE_SIGN_ENTITLEMENTS = BlindTiger/BlindTiger.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 3;
+				CURRENT_PROJECT_VERSION = 4;
 				DEVELOPMENT_ASSET_PATHS = "\"BlindTiger/Preview Content\"";
 				DEVELOPMENT_TEAM = RSCT893G95;
 				ENABLE_PREVIEWS = YES;
@@ -988,7 +1000,7 @@
 				CODE_SIGN_ENTITLEMENTS = BlindTiger/BlindTiger.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 3;
+				CURRENT_PROJECT_VERSION = 4;
 				DEVELOPMENT_ASSET_PATHS = "\"BlindTiger/Preview Content\"";
 				DEVELOPMENT_TEAM = RSCT893G95;
 				ENABLE_PREVIEWS = YES;
