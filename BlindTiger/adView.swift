@@ -26,3 +26,5 @@ struct adView : UIViewRepresentable {
 
     }
 }
+
+//NATIVE ADS: ca-app-pub-5704345460704356/5119431943
