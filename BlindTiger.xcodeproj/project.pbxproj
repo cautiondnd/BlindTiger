@@ -233,8 +233,9 @@
 				AC0D1F0F285968B2005AE4BB /* Profile */,
 				ACDD68A028BED11A00D66451 /* GodModeStats */,
 			);
-			path = IOS16redesign;
-			sourceTree = SOURCE_ROOT;
+			name = IOS16redesign;
+			path = ../IOS16redesign;
+			sourceTree = "<group>";
 		};
 		AC0D1F06285968B2005AE4BB /* Home */ = {
 			isa = PBXGroup;
