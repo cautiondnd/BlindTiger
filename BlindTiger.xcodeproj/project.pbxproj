@@ -154,9 +154,9 @@
 		AC5C54DE255198B2008D66B0 /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
 		AC65F0E529424016008FA3E9 /* TabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarView.swift; sourceTree = "<group>"; };
 		AC65F0E729425B56008FA3E9 /* adView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = adView.swift; sourceTree = "<group>"; };
-		AC65F0F329425D61008FA3E9 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Colors.swift; path = IOS16redesign/Utilities/Colors.swift; sourceTree = SOURCE_ROOT; };
-		AC65F0F529425D65008FA3E9 /* navbarColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = navbarColorExtension.swift; path = IOS16redesign/Utilities/navbarColorExtension.swift; sourceTree = SOURCE_ROOT; };
-		AC65F0F729425D91008FA3E9 /* DateExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DateExtension.swift; path = IOS16redesign/Utilities/DateExtension.swift; sourceTree = SOURCE_ROOT; };
+		AC65F0F329425D61008FA3E9 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Colors.swift; path = BlindTiger/IOS16redesign/Utilities/Colors.swift; sourceTree = SOURCE_ROOT; };
+		AC65F0F529425D65008FA3E9 /* navbarColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = navbarColorExtension.swift; path = BlindTiger/IOS16redesign/Utilities/navbarColorExtension.swift; sourceTree = SOURCE_ROOT; };
+		AC65F0F729425D91008FA3E9 /* DateExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DateExtension.swift; path = BlindTiger/IOS16redesign/Utilities/DateExtension.swift; sourceTree = SOURCE_ROOT; };
 		AC7D3538259413B2009C5573 /* TextFieldExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldExtension.swift; sourceTree = "<group>"; };
 		AC84848F285985C900FC2D01 /* HomeCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCardView.swift; sourceTree = "<group>"; };
 		AC90AEDD258D76EF00D3FE6E /* PeekCommentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeekCommentView.swift; sourceTree = "<group>"; };
@@ -233,8 +233,7 @@
 				AC0D1F0F285968B2005AE4BB /* Profile */,
 				ACDD68A028BED11A00D66451 /* GodModeStats */,
 			);
-			name = IOS16redesign;
-			path = ../IOS16redesign;
+			path = IOS16redesign;
 			sourceTree = "<group>";
 		};
 		AC0D1F06285968B2005AE4BB /* Home */ = {
@@ -332,8 +331,8 @@
 		AC5C542D255052E5008D66B0 /* BlindTiger */ = {
 			isa = PBXGroup;
 			children = (
-				ACD5571428BBF207007E43A0 /* BlindTiger.entitlements */,
 				AC0D1F05285968B2005AE4BB /* IOS16redesign */,
+				ACD5571428BBF207007E43A0 /* BlindTiger.entitlements */,
 				AC5C542E255052E5008D66B0 /* BlindTigerApp.swift */,
 				AC65F0E729425B56008FA3E9 /* adView.swift */,
 				AC65F0F329425D61008FA3E9 /* Colors.swift */,
