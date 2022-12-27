@@ -28,3 +28,4 @@ struct adView : UIViewRepresentable {
 }
 
 //NATIVE ADS: ca-app-pub-5704345460704356/5119431943
+//FAKE ADS: ca-app-pub-3940256099942544/2934735716
