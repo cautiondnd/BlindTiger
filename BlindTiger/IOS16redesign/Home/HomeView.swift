@@ -12,7 +12,11 @@ import GoogleMobileAds
 struct HomeView: View {
     @ObservedObject var homeData = HomeModel()
     @State var showPostSheet = false
-        
+    
+    let nativeAdView = nativeAdViewDisplay()
+   
+
+
         var body: some View {
             VStack(spacing: 0){
          
@@ -64,15 +68,21 @@ struct HomeView: View {
             
             VStack(spacing: 10){
                 ForEach(Array(homeData.recentPosts.enumerated()), id: \.element) {index, post in
+                    
                     if !blockedUsers.contains(post.authoruid) {
                         
                         cardView(postData: post, votes: post.votes, upvote: UserDefaults.standard.bool(forKey: "\(post.id)upvoted"), downvote: UserDefaults.standard.bool(forKey: "\(post.id)downvoted"), reported: UserDefaults.standard.bool(forKey: "\(post.id)reported"))
                         
                         if index.isMultiple(of: 7) && index != 0 {
-                                adView().frame(height: 250).padding()
-                                    .background(RoundedRectangle(cornerRadius: 10).foregroundColor(.white).shadow(color: Color.black.opacity(0.15), radius: 6)).padding(.horizontal).padding(.vertical, 5)
+                            
+                            nativeAdView
+                            
                         }
+                        
                     }
+                    
+                   
+
                    
                 }
             }
@@ -101,8 +111,11 @@ struct HomeView: View {
                                     cardView(postData: post, votes: post.votes, upvote: UserDefaults.standard.bool(forKey: "\(post.id)upvoted"), downvote: UserDefaults.standard.bool(forKey: "\(post.id)downvoted"), reported: UserDefaults.standard.bool(forKey: "\(post.id)reported"))
                                     
                                     if index.isMultiple(of: 7) && index != 0 {
-                                            adView().frame(height: 250).padding()
-                                                .background(RoundedRectangle(cornerRadius: 10).foregroundColor(.white).shadow(color: Color.black.opacity(0.15), radius: 6)).padding(.horizontal).padding(.vertical, 5)}
+                                       
+                                       
+                                        nativeAdView
+                                        
+                                    }
                                    
                                 }
                                 

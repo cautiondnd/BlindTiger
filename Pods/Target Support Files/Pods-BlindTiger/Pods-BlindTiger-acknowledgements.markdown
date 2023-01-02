@@ -2322,7 +2322,7 @@ Copyright 2020 Google
 
 ## Google-Mobile-Ads-SDK
 
-Copyright 2020 Google
+Copyright 2022 Google
 
 ## GoogleAppMeasurement
 
@@ -2540,7 +2540,7 @@ Copyright 2019 Google
 
 ## GoogleUserMessagingPlatform
 
-Copyright 2020 Google
+Copyright 2022 Google
 
 ## GoogleUtilities
 

@@ -10,6 +10,13 @@
 		27EDA5F21EF3891D51F312A2 /* Pods_BlindTiger_BlindTigerUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 203EFEC5C9076CFCE78E3097 /* Pods_BlindTiger_BlindTigerUITests.framework */; };
 		504A46949DA7A52EE4ECF2D6 /* Pods_BlindTigerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B8A79E2AC92DE37ED8C880F /* Pods_BlindTigerTests.framework */; };
 		905B721CCC0034727C654BC6 /* Pods_BlindTiger.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 45571985574E6E6E3FE153ED /* Pods_BlindTiger.framework */; };
+		9F7E80C0295EED0300DDBBBD /* GADTMediumTemplateView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9F7E80B4295EED0300DDBBBD /* GADTMediumTemplateView.xib */; };
+		9F7E80C1295EED0300DDBBBD /* GADTSmallTemplateView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F7E80B8295EED0300DDBBBD /* GADTSmallTemplateView.m */; };
+		9F7E80C2295EED0300DDBBBD /* GADTSmallTemplateView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9F7E80B9295EED0300DDBBBD /* GADTSmallTemplateView.xib */; };
+		9F7E80C3295EED0300DDBBBD /* GADTTemplateView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F7E80BA295EED0300DDBBBD /* GADTTemplateView.m */; };
+		9F7E80C4295EED0300DDBBBD /* GADTFullScreenTemplateView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9F7E80BB295EED0300DDBBBD /* GADTFullScreenTemplateView.xib */; };
+		9F7E80C5295EED0300DDBBBD /* GADTMediumTemplateView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F7E80BC295EED0300DDBBBD /* GADTMediumTemplateView.m */; };
+		9F7E80C6295EED0300DDBBBD /* GADTFullScreenTemplateView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F7E80BD295EED0300DDBBBD /* GADTFullScreenTemplateView.m */; };
 		AC0CA20F287E62D700B802A1 /* ProfileModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC0CA20E287E62D700B802A1 /* ProfileModel.swift */; };
 		AC0D1F16285968B2005AE4BB /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC0D1F07285968B2005AE4BB /* HomeView.swift */; };
 		AC0D1F17285968B2005AE4BB /* NewHomePost.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC0D1F08285968B2005AE4BB /* NewHomePost.swift */; };
@@ -105,6 +112,18 @@
 		535B4CCC29B49645A371CA7E /* Pods-BlindTigerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BlindTigerTests.release.xcconfig"; path = "Target Support Files/Pods-BlindTigerTests/Pods-BlindTigerTests.release.xcconfig"; sourceTree = "<group>"; };
 		5B8A79E2AC92DE37ED8C880F /* Pods_BlindTigerTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BlindTigerTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		89CBB4128EB493906098CE1E /* Pods-BlindTiger-BlindTigerUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BlindTiger-BlindTigerUITests.release.xcconfig"; path = "Target Support Files/Pods-BlindTiger-BlindTigerUITests/Pods-BlindTiger-BlindTigerUITests.release.xcconfig"; sourceTree = "<group>"; };
+		9F7E80B4295EED0300DDBBBD /* GADTMediumTemplateView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GADTMediumTemplateView.xib; sourceTree = "<group>"; };
+		9F7E80B5295EED0300DDBBBD /* GADTTemplateView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADTTemplateView.h; sourceTree = "<group>"; };
+		9F7E80B6295EED0300DDBBBD /* GADTMediumTemplateView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADTMediumTemplateView.h; sourceTree = "<group>"; };
+		9F7E80B7295EED0300DDBBBD /* GADTFullScreenTemplateView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADTFullScreenTemplateView.h; sourceTree = "<group>"; };
+		9F7E80B8295EED0300DDBBBD /* GADTSmallTemplateView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GADTSmallTemplateView.m; sourceTree = "<group>"; };
+		9F7E80B9295EED0300DDBBBD /* GADTSmallTemplateView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GADTSmallTemplateView.xib; sourceTree = "<group>"; };
+		9F7E80BA295EED0300DDBBBD /* GADTTemplateView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GADTTemplateView.m; sourceTree = "<group>"; };
+		9F7E80BB295EED0300DDBBBD /* GADTFullScreenTemplateView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GADTFullScreenTemplateView.xib; sourceTree = "<group>"; };
+		9F7E80BC295EED0300DDBBBD /* GADTMediumTemplateView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GADTMediumTemplateView.m; sourceTree = "<group>"; };
+		9F7E80BD295EED0300DDBBBD /* GADTFullScreenTemplateView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GADTFullScreenTemplateView.m; sourceTree = "<group>"; };
+		9F7E80BE295EED0300DDBBBD /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9F7E80BF295EED0300DDBBBD /* GADTSmallTemplateView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADTSmallTemplateView.h; sourceTree = "<group>"; };
 		AC0CA20E287E62D700B802A1 /* ProfileModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileModel.swift; sourceTree = "<group>"; };
 		AC0D1F07285968B2005AE4BB /* HomeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		AC0D1F08285968B2005AE4BB /* NewHomePost.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewHomePost.swift; sourceTree = "<group>"; };
@@ -222,6 +241,25 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		9F7E80B3295EED0300DDBBBD /* nativetemplates */ = {
+			isa = PBXGroup;
+			children = (
+				9F7E80B4295EED0300DDBBBD /* GADTMediumTemplateView.xib */,
+				9F7E80B5295EED0300DDBBBD /* GADTTemplateView.h */,
+				9F7E80B6295EED0300DDBBBD /* GADTMediumTemplateView.h */,
+				9F7E80B7295EED0300DDBBBD /* GADTFullScreenTemplateView.h */,
+				9F7E80B8295EED0300DDBBBD /* GADTSmallTemplateView.m */,
+				9F7E80B9295EED0300DDBBBD /* GADTSmallTemplateView.xib */,
+				9F7E80BA295EED0300DDBBBD /* GADTTemplateView.m */,
+				9F7E80BB295EED0300DDBBBD /* GADTFullScreenTemplateView.xib */,
+				9F7E80BC295EED0300DDBBBD /* GADTMediumTemplateView.m */,
+				9F7E80BD295EED0300DDBBBD /* GADTFullScreenTemplateView.m */,
+				9F7E80BE295EED0300DDBBBD /* Info.plist */,
+				9F7E80BF295EED0300DDBBBD /* GADTSmallTemplateView.h */,
+			);
+			path = nativetemplates;
+			sourceTree = "<group>";
+		};
 		AC0D1F05285968B2005AE4BB /* IOS16redesign */ = {
 			isa = PBXGroup;
 			children = (
@@ -331,6 +369,7 @@
 		AC5C542D255052E5008D66B0 /* BlindTiger */ = {
 			isa = PBXGroup;
 			children = (
+				9F7E80B3295EED0300DDBBBD /* nativetemplates */,
 				AC0D1F05285968B2005AE4BB /* IOS16redesign */,
 				ACD5571428BBF207007E43A0 /* BlindTiger.entitlements */,
 				AC5C542E255052E5008D66B0 /* BlindTigerApp.swift */,
@@ -584,9 +623,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9F7E80C2295EED0300DDBBBD /* GADTSmallTemplateView.xib in Resources */,
 				AC5C5436255052E7008D66B0 /* Preview Assets.xcassets in Resources */,
 				AC5C5433255052E7008D66B0 /* Assets.xcassets in Resources */,
+				9F7E80C4295EED0300DDBBBD /* GADTFullScreenTemplateView.xib in Resources */,
 				ACB7C35125A0E58000CB6320 /* GoogleService-Info.plist in Resources */,
+				9F7E80C0295EED0300DDBBBD /* GADTMediumTemplateView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -752,6 +794,7 @@
 				AC65F0F429425D61008FA3E9 /* Colors.swift in Sources */,
 				AC1C06FA2572EB60009A4694 /* PeekView.swift in Sources */,
 				AC0D1F18285968B2005AE4BB /* HomeModel.swift in Sources */,
+				9F7E80C5295EED0300DDBBBD /* GADTMediumTemplateView.m in Sources */,
 				ACEE2CE3255D539B00C6CE6C /* WelcomeViewModel.swift in Sources */,
 				ACEE294E2862197700AD9B89 /* PeekSchoolView.swift in Sources */,
 				AC7D3539259413B2009C5573 /* TextFieldExtension.swift in Sources */,
@@ -768,6 +811,7 @@
 				ACEE2951286234EE00AD9B89 /* PeekSchoolModel.swift in Sources */,
 				AC5BA48D287CB8B7002EE4D1 /* RatingCommentModel.swift in Sources */,
 				AC0D1F1D285968B2005AE4BB /* SelfProfileView.swift in Sources */,
+				9F7E80C1295EED0300DDBBBD /* GADTSmallTemplateView.m in Sources */,
 				ACC5098E2863782C0037F540 /* PeekSchoolComments.swift in Sources */,
 				AC5BA29E28762F6D00EF66C5 /* RatingCards.swift in Sources */,
 				ACE0C35B2561AEFD0051C61D /* NotificationView.swift in Sources */,
@@ -783,11 +827,13 @@
 				AC0D1F1C285968B2005AE4BB /* SignInView.swift in Sources */,
 				AC2C1C3525651C1700C30014 /* NewPost.swift in Sources */,
 				AC928D162582FC83008B4871 /* PullToRefresh.swift in Sources */,
+				9F7E80C3295EED0300DDBBBD /* GADTTemplateView.m in Sources */,
 				AC65F0F829425D91008FA3E9 /* DateExtension.swift in Sources */,
 				ACF3C896256ACB310045AB20 /* CommentViewModel.swift in Sources */,
 				AC5C54A825506C44008D66B0 /* PreLoginView.swift in Sources */,
 				AC0D1F16285968B2005AE4BB /* HomeView.swift in Sources */,
 				AC5BA48B287C7F94002EE4D1 /* RatingsModel.swift in Sources */,
+				9F7E80C6295EED0300DDBBBD /* GADTFullScreenTemplateView.m in Sources */,
 				ACBF658F293E4CF700931407 /* GodModeView.swift in Sources */,
 				ACEE295328627BFA00AD9B89 /* CommentModel.swift in Sources */,
 				AC1A5C492866514F00979DE4 /* BulletinModel.swift in Sources */,
